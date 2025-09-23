@@ -13,8 +13,8 @@ def forList():
     List1 = []
     for x in a:
         List1.append(x+4)
-        #print(List1)
-    #print(List1)
+        print(List1)
+    print(List1)
 
 def nestFor():
     a_V = []
@@ -42,4 +42,5 @@ if __name__ == "__main__": # if this is the file being executed (instead of bein
     for1()
     #for2()
     #forList()
+    #nestFor()
     #leaveLoop()
