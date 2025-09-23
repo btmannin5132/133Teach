@@ -2,8 +2,8 @@
 Boolean Tables, feel free to uncomment if you want to see them
 
 """
-
 """
+
 p = [1,0]
 q = [1,0]
 
