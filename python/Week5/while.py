@@ -13,7 +13,7 @@ def while1():
 
 def while2():
     count_loops = 0
-    x = 1
+    x = 0
     while x <= 5:
         x = x + 1
         y = x**2 - 1
@@ -35,6 +35,6 @@ def while3(): #stuck in a loop
 
 
 if __name__ == "__main__": # if this is the file being executed (instead of being imported):
-    while1()
+    #while1()
     #while2()
-    #while3()
+    while3()

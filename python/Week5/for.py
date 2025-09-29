@@ -9,7 +9,7 @@ def for2():
         print(f"x={x}, y={y}")
 
 def forList():
-    a=range(10)
+    a=range(20)
     List1 = []
     for x in a:
         List1.append(x+4)
@@ -39,8 +39,8 @@ def leaveLoop():
 
 
 if __name__ == "__main__": # if this is the file being executed (instead of being imported):
-    for1()
+    #for1()
     #for2()
     #forList()
-    #nestFor()
+    nestFor()
     #leaveLoop()

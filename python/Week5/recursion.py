@@ -36,6 +36,6 @@ def hanoiRecurs(n, source, auxiliary, destination):
 
 
 if __name__ == "__main__": # if this is the file being executed (instead of being imported):
-    collatz_iter(123)
+    #collatz_iter(123)
     #collatz_recur(123,0)
-    #hanoiRecurs(5, 'A', 'B', 'C')
+    hanoiRecurs(5, 'A', 'B', 'C')
