@@ -1,0 +1,79 @@
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# You can split images without the image library too
+# (like for your project and work with the pixels individually)
+
+img = plt.imread(file_name)
+
+#check if image formatting is correct 
+
+# if the  img.dtype is not np.float32 and/or img.dtype is not np.float64
+# Take the rgb values from 0-255 to 0-1
+
+#find the middle of the image with img.shape
+height, width, channels = img.shape
+
+#split the image in half
+
+left_half_color = img[:, :split_point, :] #notice the colon location in the middle
+right_half_color = img[:, split_point:, :]
+
+#How do we calcualte luminance?
+#L = ____*R + ___*G + ___*B
+#Might be worth storing the rgb weigts in an array... (np array will make math faster)
+#grayscale_weights = np.array([r,g,b])
+
+#combine in single scalr with dot prodcut
+#Can np do that for us?
+#luminance = np. ...
+
+#Once you have a luminance for each pixel, stack it 3x so each rgb pixel has instructions
+right_half_grey = np.stack([luminance] * 3, axis=2)
+
+#Stack the color and grey image next to eachother
+final_image = np.hstack((left_half_color, right_half_grey))
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mNameError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 4[39m
+[32m      1[39m [38;5;66;03m# You can split images without the image library too[39;00m
+[32m      2[39m [38;5;66;03m# (like for your project and work with the pixels individually)[39;00m
+[32m----> [39m[32m4[39m img = plt.imread([43mfile_name[49m)
+[32m      6[39m [38;5;66;03m#check if image formatting is correct [39;00m
+[32m      7[39m 
+[32m      8[39m [38;5;66;03m# if the  img.dtype is not np.float32 and/or img.dtype is not np.float64[39;00m
+[32m      9[39m [38;5;66;03m# Take the rgb values from 0-255 to 0-1[39;00m
+[32m     10[39m 
+[32m     11[39m [38;5;66;03m#find the middle of the image with img.shape[39;00m
+[32m     12[39m height, width, channels = img.shape
+
+[31mNameError[39m: name 'file_name' is not defined
+
