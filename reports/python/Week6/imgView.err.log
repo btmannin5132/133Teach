@@ -29,6 +29,7 @@ import matplotlib.pyplot as plt
 
 # Prompt user for image name​
 image_name = input('Enter image name (with extension): ')
+#base image: "spiderPete.jpg"
 # Read the image using matplotlib​
 image = plt.imread(image_name)
 
@@ -51,8 +52,9 @@ plt.show()
 [32m      1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mplt[39;00m
 [32m      3[39m [38;5;66;03m# Prompt user for image name​[39;00m
 [32m----> [39m[32m4[39m image_name = [38;5;28;43minput[39;49m[43m([49m[33;43m'[39;49m[33;43mEnter image name (with extension): [39;49m[33;43m'[39;49m[43m)[49m
-[32m      5[39m [38;5;66;03m# Read the image using matplotlib​[39;00m
-[32m      6[39m image = plt.imread(image_name)
+[32m      5[39m [38;5;66;03m#base image: "spiderPete.jpg"[39;00m
+[32m      6[39m [38;5;66;03m# Read the image using matplotlib​[39;00m
+[32m      7[39m image = plt.imread(image_name)
 
 [36mFile [39m[32m~/.local/lib/python3.12/site-packages/ipykernel/kernelbase.py:1281[39m, in [36mKernel.raw_input[39m[34m(self, prompt)[39m
 [32m   1279[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._allow_stdin:

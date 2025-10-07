@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Numpy Arrays" href="../Week7/numpyStuff.html" />
-    <link rel="prev" title="ENGR133 Resources" href="../../intro.html" />
+    <link rel="prev" title="Using Loops" href="../Week5/loops.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,7 +179,11 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Week5/loops.html">Using Loops</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Moving an image to matplotlib</a></li>
 </ul>
@@ -423,6 +427,7 @@ document.write(`
 
 <span class="c1"># Prompt user for image name​</span>
 <span class="n">image_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter image name (with extension): &#39;</span><span class="p">)</span>
+<span class="c1">#base image: &quot;spiderPete.jpg&quot;</span>
 <span class="c1"># Read the image using matplotlib​</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_name</span><span class="p">)</span>
 
@@ -446,8 +451,9 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Prompt user for image name​</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">image_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter image name (with extension): &#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Read the image using matplotlib​</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_name</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#base image: &quot;spiderPete.jpg&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Read the image using matplotlib​</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_name</span><span class="p">)</span>
 
 <span class="nn">File ~/.local/lib/python3.12/site-packages/ipykernel/kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
@@ -541,12 +547,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../intro.html"
+       href="../Week5/loops.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ENGR133 Resources</p>
+        <p class="prev-next-title">Using Loops</p>
       </div>
     </a>
     <a class="right-next"
