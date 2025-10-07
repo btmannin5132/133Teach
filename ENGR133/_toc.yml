@@ -4,4 +4,4 @@
 format: jb-book
 root: intro
 chapters:
-- file: ../python/Week6/imgView.ipynb
+- file: /python/Week6/imgView
