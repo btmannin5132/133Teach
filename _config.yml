@@ -37,6 +37,6 @@ launch_buttons:
   # binderhub_url: "https://mybinder.org"  # The URL for the BinderHub service
   # notebook_interface: "jupyterlab"  # or "classic"
 
-thebe_config:
-  # This is the key setting to automatically start the connection
-  activate_on_load: true
+  thebe_config:
+    # This is the key setting to automatically start the connection
+    activate_on_load: true
