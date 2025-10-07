@@ -23,7 +23,7 @@ bibtex_bibfiles:
 repository:
   url: https://github.com/btmannin5132/133Teach  # Online location of your book
   path_to_book: root  # Optional path to your book, relative to the repository root
-  branch: gh-pages
+  branch: main
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
