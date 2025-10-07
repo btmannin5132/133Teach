@@ -5,6 +5,10 @@ format: jb-book
 root: intro
 
 parts:
+  - caption: Week 5
+    chapters:
+      - file: python/Week5/loops
+
   - caption: Week 6
     chapters:
       - file: python/Week6/imgView
