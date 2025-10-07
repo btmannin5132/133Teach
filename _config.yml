@@ -32,4 +32,5 @@ html:
   use_repository_button: true
 
 launch_buttons:
-  thebe                  : true
+  binderhub_url: "https://mybinder.org"  # The URL for the BinderHub service
+  notebook_interface: "jupyterlab"  # or "classic"

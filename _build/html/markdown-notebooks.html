@@ -235,19 +235,19 @@
       
       
       
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
+      <li><a href="https://mybinder.org/v2/gh/btmannin5132/133Teach/gh-pages?urlpath=lab/tree/root/markdown-notebooks.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
-  <i class="fas fa-play"></i>
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
-<span class="btn__text-container">Live Code</span>
-</button>
+<span class="btn__text-container">Binder</span>
+</a>
 </li>
       
   </ul>
@@ -489,8 +489,8 @@ See the YAML at the top of this page for example.</p></li>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "btmannin5132/133Teach",
-            ref: "gh-pages",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
