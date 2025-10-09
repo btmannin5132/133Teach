@@ -37,3 +37,11 @@ launch_buttons:
 
   thebe_config: 
     activate_on_load: true
+
+binder:
+  # 1. Point to the public URL of your Git repository
+  url: https://github.com/btmannin5132/133Teach
+  # 2. Specify the branch where your environment.yml lives (usually 'main' or 'master')
+  branch: main 
+  # 3. Specify the BinderHub URL (where the environment will be built/served from)
+  binderhub_url: "https://mybinder.org"
