@@ -5,6 +5,12 @@ format: jb-book
 root: intro
 
 parts:
+  - caption: Week 4
+    chapters:
+      - file: python/Week4/vars
+      - file: python/Week4/conditionals
+      - file: python/Week4/booleans
+
   - caption: Week 5
     chapters:
       - file: python/Week5/loops
