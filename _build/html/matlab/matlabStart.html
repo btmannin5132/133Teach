@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Manning-ENGR133</title>
+    <title>MATLAB Intro &#8212; Manning-ENGR133</title>
   
   
   
@@ -196,6 +196,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../python/Week7/numpyStuff.html">Numpy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/Week7/imageInfo.html">Modifying images</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">MATLAB Intro</a></li>
 </ul>
 
     </div>
@@ -399,9 +403,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -412,19 +414,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>MATLAB Intro</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -434,11 +428,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="matlab-intro">
+<h1>MATLAB Intro<a class="headerlink" href="#matlab-intro" title="Link to this heading">#</a></h1>
+<p>Note:  We are using an OCtave KErnel instead of MATLAB.<br />
+Open source, free, and can run on a potato.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="c"># MATLAB Intro</span>
-<span class="n">Note</span><span class="p">:</span>  <span class="n">We</span> <span class="n">are</span> <span class="n">using</span> <span class="n">an</span> <span class="n">OCtave</span> <span class="n">KErnel</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">MATLAB</span><span class="p">.</span>  
-    <span class="n">Open</span> <span class="nb">source</span><span class="p">,</span> <span class="n">free</span><span class="p">,</span> <span class="nb">and</span> <span class="n">can</span> <span class="nb">run</span> <span class="n">on</span> <span class="n">a</span> <span class="n">potato</span><span class="p">.</span>
+<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;off&#39;</span><span class="p">,</span> <span class="s">&#39;all&#39;</span><span class="p">)</span> <span class="c">%gnu plot is not really supported anymore, and will likely throw some warnings</span>
+<span class="n">n</span> <span class="p">=</span> <span class="mi">10</span>
+<span class="n">x</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="o">.^</span><span class="mi">2</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -490,43 +490,15 @@ The qt toolkit is recommended instead.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
-
-?2004h
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
-
-error: parse error:
-
-  syntax error
-
-&gt;&gt;&gt; Note:  We are using an OCtave KErnel instead of MATLAB.  
-                ^
-?2004h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
-
-error: &#39;Open&#39; undefined near line 1, column 5
-?2004h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="nb">warning</span><span class="p">(</span><span class="s">&#39;off&#39;</span><span class="p">,</span> <span class="s">&#39;all&#39;</span><span class="p">)</span> <span class="c">%gnu plot is not really supported anymore, and will likely throw some warnings</span>
-<span class="n">n</span> <span class="p">=</span> <span class="mi">10</span>
-<span class="n">x</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="o">.^</span><span class="mi">2</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
-
-?2004h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
@@ -575,6 +547,7 @@ y =
 <img alt="../_images/75949db85fe7cea39b8e19ff9999e5bbcb52b4337815be2da8025f8a65f251ff.png" src="../_images/75949db85fe7cea39b8e19ff9999e5bbcb52b4337815be2da8025f8a65f251ff.png" />
 </div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -621,21 +594,6 @@ y =
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
