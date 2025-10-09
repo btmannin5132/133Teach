@@ -3,6 +3,5 @@ numpy
 pandas
 matplotlib
 ghp-import
-octave
-# You may also need development libraries or specific Octave packages
-liboctave-dev
+ipykernel
+octave_kernel
