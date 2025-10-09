@@ -15,5 +15,7 @@ octave --no-gui --eval 'pkg install -forge fltk;'
 # The 'inline' backend is what allows the image to be displayed in Jupyter.
 octave --no-gui --eval 'pkg load fltk; graphics_toolkit ("fltk");'
 
+octave --no-gui --eval 'warning ("off", "Octave:graphics_toolkit_set");'
+
 # 4. Save the new paths and configurations.
 octave --no-gui --eval 'savepath'
