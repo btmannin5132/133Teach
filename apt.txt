@@ -1,6 +1,10 @@
+# apt.txt
 octave
 gnuplot
 liboctave-dev
 ghostscript
-gnuplot-x11 
-fontconfig 
+gnuplot-x11
+fontconfig
+libfreetype6-dev
+libsm-dev         
+libxext-dev      
