@@ -1,1 +1,4 @@
 octave
+gnuplot # The plotting engine Octave will use
+liboctave-dev # Octave development libraries (often needed for core functionality)
+ghostscript # Used by Octave for various output formats, including plotting
