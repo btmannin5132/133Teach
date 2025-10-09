@@ -4,7 +4,7 @@ channels:
   - conda-forge
   - default
 dependencies:
-  - python=3.10           # Python interpreter
+  - python         # Python interpreter
   - octave                # GNU Octave executable
   - jupyter-book
   - pip:
