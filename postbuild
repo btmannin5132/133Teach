@@ -1,12 +1,19 @@
 #!/bin/bash
 
-# 1. Install the FLTK package (Octave's default plotting toolkit)
-# The 'fltk' backend is often more reliable than 'gnuplot' on headless servers.
+# 1. CRITICAL FIX: Set Octave's library path
+# This is necessary because the default library search path often breaks 
+# when dependencies are installed via apt. This path points to where 
+# Octave's core libraries reside.
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/octave/${OCTAVE_VERSION}/"
+
+# 2. Install the necessary 'fltk' package (known to be more stable than gnuplot)
+# We use 'pkg install' instead of including it in requirements to force the install
+# within the correct Octave environment context.
 octave --no-gui --eval 'pkg install -forge fltk;'
 
-# 2. Set the graphics toolkit to fltk
+# 3. Explicitly set the graphics toolkit to fltk
 # The 'inline' backend is what allows the image to be displayed in Jupyter.
 octave --no-gui --eval 'pkg load fltk; graphics_toolkit ("fltk");'
 
-# Ensure the system-wide Octave path is correctly saved
+# 4. Save the new paths and configurations.
 octave --no-gui --eval 'savepath'
