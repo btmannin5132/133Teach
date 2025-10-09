@@ -39,3 +39,6 @@ binder:
   url: https://github.com/btmannin5132/133Teach
   branch: main 
   binderhub_url: "https://mybinder.org"
+
+execute:
+  execute_notebooks: force

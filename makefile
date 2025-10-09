@@ -4,6 +4,7 @@ all: clean build push publish
 
 clean:
 	jupyter-book clean .
+	rm -rf .jupyter_cache
 
 build:
 	jupyter-book build .
