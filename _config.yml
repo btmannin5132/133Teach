@@ -32,8 +32,8 @@ html:
   use_repository_button: true
 
 launch_buttons:
-  #binderhub_url: "https://mybinder.org"
   thebe: true  
+  binder: true
 
   thebe_config: 
     activate_on_load: true
