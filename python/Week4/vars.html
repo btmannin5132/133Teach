@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Moving an image to matplotlib &#8212; Manning-ENGR133</title>
+    <title>Global Variables &#8212; Manning-ENGR133</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'python/Week6/imgView';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python/Week4/vars';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Numpy Arrays" href="../Week7/numpyStuff.html" />
-    <link rel="prev" title="Using Loops" href="../Week5/loops.html" />
+    <link rel="next" title="Conditionals" href="conditionals.html" />
+    <link rel="prev" title="ENGR133 Resources" href="../../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,18 +180,18 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Week4/vars.html">Global Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Week4/conditionals.html">Conditionals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Week4/booleans.html">Boolean Operations</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Global Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="booleans.html">Boolean Operations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Week5/loops.html">Using Loops</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Moving an image to matplotlib</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Week6/imgView.html">Moving an image to matplotlib</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 7</span></p>
 <ul class="nav bd-sidenav">
@@ -299,7 +299,7 @@
       
       
       
-      <li><a href="https://github.com/btmannin5132/133Teach/issues/new?title=Issue%20on%20page%20%2Fpython/Week6/imgView.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/btmannin5132/133Teach/issues/new?title=Issue%20on%20page%20%2Fpython/Week4/vars.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -329,7 +329,7 @@
       
       
       
-      <li><a href="../../_sources/python/Week6/imgView.ipynb" target="_blank"
+      <li><a href="../../_sources/python/Week4/vars.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -411,7 +411,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Moving an image to matplotlib</h1>
+    <h1>Global Variables</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -425,97 +425,87 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="moving-an-image-to-matplotlib">
-<h1>Moving an image to matplotlib<a class="headerlink" href="#moving-an-image-to-matplotlib" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="global-variables">
+<h1>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A GLOBAL variable, accessible everywhere.</span>
+<span class="n">menu_item</span> <span class="o">=</span> <span class="s2">&quot;egg and spam&quot;</span>
 
-<span class="c1"># Prompt user for image name​</span>
-<span class="n">image_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter image name (with extension): &#39;</span><span class="p">)</span>
-<span class="c1">#base image: &quot;spiderPete.jpg&quot;</span>
-<span class="c1"># Read the image using matplotlib​</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_name</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">order</span><span class="p">():</span>
+    <span class="c1"># This is a LOCAL variable. It only exists inside this function.</span>
+    <span class="n">customer_item</span> <span class="o">=</span> <span class="s2">&quot;spam, egg, sausage, and spam&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Customer: I&#39;ll have the </span><span class="si">{</span><span class="n">customer_item</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Waitress: We&#39;ve only got </span><span class="si">{</span><span class="n">menu_item</span><span class="si">}</span><span class="s2">, sir. Waiting on more spam&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customer: Oh, alright then.&quot;</span><span class="p">)</span>
 
-<span class="c1"># Display the image​</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Spider Pete&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;It is a spider&#39;</span><span class="p">)</span>  <span class="c1"># Appropriate label</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;It is Pete&#39;</span><span class="p">)</span>  <span class="c1"># Appropriate label if needed</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">serves</span><span class="p">():</span>
+    <span class="c1"># The waitress uses the GLOBAL variable because that&#39;s what&#39;s available</span>
+    <span class="c1"># to the whole restaurant.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Waitress serves: Here&#39;s your </span><span class="si">{</span><span class="n">menu_item</span><span class="si">}</span><span class="s2">, sir. The one from the menu.&quot;</span><span class="p">)</span>
 
-<span class="c1"># Show the plot​</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">request</span><span class="p">():</span>
+    <span class="n">menu_item</span> <span class="o">=</span> <span class="s2">&quot;spam, egg, spam, spam, spam, bacon, and spam&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Customer: How much spam does </span><span class="si">{</span><span class="n">menu_item</span><span class="si">}</span><span class="s2"> have in it?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Waitress: Not as much as spam, spam, spam, spam, spam, baked beans, spam and spam has.&quot;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">delivery</span><span class="p">():</span>
+    <span class="c1"># This function uses the &#39;global&#39; keyword to change the GLOBAL menu_item.</span>
+    <span class="c1"># It&#39;s a special delivery of &#39;spam spam spam spam&#39;.</span>
+    <span class="k">global</span> <span class="n">menu_item</span>
+    <span class="n">menu_item</span> <span class="o">=</span> <span class="s2">&quot;spam, spam, spam, spam, egg and spam&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We got more spam!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Here&#39;s what happens:</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The menu has been set up. The menu has </span><span class="si">{</span><span class="n">menu_item</span><span class="si">}</span><span class="s2">, and that&#39;s it&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A customer comes in and places an order.&quot;</span><span class="p">)</span>
+<span class="n">order</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The waitress serves from the menu again.&quot;</span><span class="p">)</span>
+<span class="n">serves</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The new spam delivery arrives!&quot;</span><span class="p">)</span>
+<span class="n">delivery</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Now, let&#39;s see what&#39;s on the menu after the delivery.&quot;</span><span class="p">)</span>
+<span class="n">serves</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Perhps something a little off menu?&quot;</span><span class="p">)</span>
+<span class="n">request</span><span class="p">()</span>
+
+<span class="c1">#Moral of the story: Don&#39;t modify global varables inside of functions if you can avoid it...</span>
+<span class="c1">#Globals are great for:</span>
+    <span class="c1">#Pins on microcontrollers</span>
+    <span class="c1">#motor assignments</span>
+    <span class="c1">#Set variables that a lot of places will use, but don&#39;t need to be changed</span>
+
+<span class="c1">#Don&#39;t use globals for:</span>
+    <span class="c1">#Literally anything else...</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Prompt user for image name​</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">image_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter image name (with extension): &#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#base image: &quot;spiderPete.jpg&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Read the image using matplotlib​</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_name</span><span class="p">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The menu has been set up. The menu has egg and spam, and that&#39;s it
 
-<span class="nn">File ~/.local/lib/python3.12/site-packages/ipykernel/kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
+A customer comes in and places an order.
+Customer: I&#39;ll have the spam, egg, sausage, and spam.
+Waitress: We&#39;ve only got egg and spam, sir. Waiting on more spam
+Customer: Oh, alright then.
 
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
-<p>Modifying images in Matplotlib</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+The waitress serves from the menu again.
+Waitress serves: Here&#39;s your egg and spam, sir. The one from the menu.
 
-<span class="n">image1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;spiderPete.jpg&#39;</span><span class="p">)</span>
-<span class="n">image2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;spiderPete.jpg&#39;</span><span class="p">)</span>
+The new spam delivery arrives!
+We got more spam!
 
-<span class="n">x_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">image1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># x-coordinates​</span>
-<span class="n">y_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">image1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># y-coordinates​</span>
+Now, let&#39;s see what&#39;s on the menu after the delivery.
+Waitress serves: Here&#39;s your spam, spam, spam, spam, egg and spam, sir. The one from the menu.
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image1</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image2</span><span class="p">)</span>
-
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_points</span><span class="p">,</span> <span class="n">y_points</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>  <span class="c1"># red points​</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_points</span><span class="p">,</span> <span class="n">y_points</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;^&#39;</span><span class="p">)</span>  <span class="c1"># yellow Triangles</span>
-
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Pete with red points&#39;</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Pete with yellow triangles&#39;</span><span class="p">)</span>
-
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Spider&#39;</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Spider&#39;</span><span class="p">)</span>
-
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;It&#39;s Spider Pete&quot;</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;It&#39;s Spider Pete&quot;</span><span class="p">)</span>
-
-<span class="c1">#plt.tight_layout()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;spiderPetePlot.png&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/662ef2ffdd70edfbfdb910ca57ad892f275614f7bd9e9383fa3291c01af0d49f.png" src="../../_images/662ef2ffdd70edfbfdb910ca57ad892f275614f7bd9e9383fa3291c01af0d49f.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
+Perhps something a little off menu?
+Customer: How much spam does spam, egg, spam, spam, spam, bacon, and spam have in it?
+Waitress: Not as much as spam, spam, spam, spam, spam, baked beans, spam and spam has.
 </pre></div>
 </div>
 </div>
@@ -535,7 +525,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./python/Week6"
+            path: "./python/Week4"
         },
         predefinedOutput: true
     }
@@ -553,20 +543,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Week5/loops.html"
+       href="../../intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Using Loops</p>
+        <p class="prev-next-title">ENGR133 Resources</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Week7/numpyStuff.html"
+       href="conditionals.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Numpy Arrays</p>
+        <p class="prev-next-title">Conditionals</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
