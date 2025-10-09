@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Force Octave to use the 'gnuplot' backend for inline plotting
-# This command runs inside the Octave interpreter.
-# The 'inline' backend is what allows the image to be displayed in Jupyter.
-octave --no-gui --eval 'pkg load all; graphics_toolkit ("gnuplot");'
+# 1. Explicitly load the graphics package
+# 2. Force Octave to use the 'gnuplot' backend for plots
+octave --no-gui --eval 'pkg load graphics; graphics_toolkit ("gnuplot");'
 
 # Ensure the system-wide Octave path is correctly saved (optional but safe)
 octave --no-gui --eval 'savepath'
