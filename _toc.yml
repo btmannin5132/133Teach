@@ -23,4 +23,7 @@ parts:
     chapters:
       - file: python/Week7/numpyStuff
       - file: python/Week7/imageInfo
-
+      
+  - caption: Week 10
+    chapters:
+      - file: matlab/matlabStart

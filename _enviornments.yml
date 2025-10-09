@@ -1,0 +1,12 @@
+# environment.yml
+name: multi-lang-book
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - python=3.10           # Python interpreter
+  - octave                # GNU Octave executable
+  - jupyter-book
+  - pip:
+    - ipykernel           # Python Kernel
+    - octave_kernel       # Octave Kernel
