@@ -23,6 +23,10 @@ parts:
     chapters:
       - file: python/Week7/numpyStuff
       - file: python/Week7/imageInfo
+  
+  - caption: Team Project
+    chapters:
+      - file: python/teamProject/normExplaination
       
   - caption: Week 10
     chapters:
