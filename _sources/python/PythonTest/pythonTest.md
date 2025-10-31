@@ -13,7 +13,9 @@ jupytext:
 # Title
 
 ```{code-cell} python
+:tags: [thebe-init]
 :tags: [thebelab]
+
 # Python code
 import numpy as np
 import matplotlib.pyplot as plt
