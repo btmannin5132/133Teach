@@ -37,10 +37,13 @@ html:
 #   binder: true # Explicitly enables the full Binder launch button/icon
 
 launch_buttons:
-  binder: true
+  binder: false
   notebook_interface: "jupyterlab"
   thebe: true
   binderhub_url: ""
+  kernel_start_options:
+    # This must match your JupyterLite kernel name
+    kernel_name: python
   
 # binder:
 #   url: https://github.com/btmannin5132/133Teach
