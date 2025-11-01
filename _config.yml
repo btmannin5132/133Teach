@@ -31,14 +31,17 @@ html:
   use_issues_button: true
   use_repository_button: true
 
+# launch_buttons:
+#   thebe: true
+#   binder: true # Explicitly enables the full Binder launch button/icon
+
 launch_buttons:
-  thebe: true
-  binder: true # Explicitly enables the full Binder launch button/icon
+  notebook_interface: "jupyterlab"
   
-binder:
-  url: https://github.com/btmannin5132/133Teach
-  branch: main 
-  binderhub_url: "https://mybinder.org"
+# binder:
+#   url: https://github.com/btmannin5132/133Teach
+#   branch: main 
+#   binderhub_url: "https://mybinder.org"
 
 execute:
   execute_notebooks: force
