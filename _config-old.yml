@@ -1,0 +1,78 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Manning-ENGR133
+author: Ben Manning
+logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/btmannin5132/133Teach  # Online location of your book
+  path_to_book: root  # Optional path to your book, relative to the repository root
+  branch: main
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  baseurl: /133Teach/
+
+# launch_buttons:
+#   thebe: true
+#   binder: true # Explicitly enables the full Binder launch button/icon
+
+launch_buttons:
+  binder: false
+  notebook_interface: "jupyterlab"
+  thebe: true
+  jupyterlite_url: "/133Teach/_build/html/lite"
+  # binderhub_url: ""
+  kernel_start_options:
+    # This must match your JupyterLite kernel name
+    kernel_name: python
+  
+# binder:
+#   url: https://github.com/btmannin5132/133Teach
+#   branch: main 
+#   binderhub_url: "https://mybinder.org"
+
+
+html:
+#   # ... (your existing html config, like use_issues_button: true)
+  
+  # New block to override the theme's default text
+  html_theme_options:
+    # This is the string the theme uses for the launch button text. 
+    # Setting it to an empty string ("") removes the misleading text.
+    launch_buttons:
+      binderhub_url: ""
+      
+      # CRITICAL OVERRIDE: Remove the default descriptive text
+      repository_url: ""  # Also remove the text for the repository link
+      path_to_docs: ""    # And remove the text for the source code link
+      
+      # The main text for the launch button link. Set to empty string
+      launch_buttons_text: ""
+
+  # This tells Thebe what URL to use for its kernel connection
+      thebe: 
+        # Use the same local path for Thebe's kernel server
+        repository_url: "/133Teach/_build/html/lite"
+        
+        # This is a key flag to silence the MyBinder message
+        binder_url: ""

@@ -10,3 +10,18 @@ li a[data-text*="mybinder"] > span {
 li a[data-original-title*="mybinder"] {
     display: none !important;
 }
+
+/* _static/custom.css */
+
+/* Targets the specific text element within Thebe's launch modal/popup */
+.thebe-launching-message p:contains("mybinder.org") {
+    display: none !important;
+}
+
+/* Fallback for the entire loading message */
+.thebe-launching-message {
+    /* If the message is still visible, you can change the text */
+    /* content: "Launching Local Environment..." !important; */
+    /* Or hide it completely */
+    display: none !important;
+}
