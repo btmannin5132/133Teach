@@ -6,16 +6,13 @@ author: Ben Manning
 logo: logo.png
 
 # --- EXECUTION ---
-# Force re-execution of notebooks on each build.
 execute:
   execute_notebooks: force
 
-# Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
 
-# Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
 
@@ -24,40 +21,36 @@ repository:
   url: https://github.com/btmannin5132/133Teach
   path_to_book: root
   branch: main
-  url_template: "https://github.com/{btmannin5132}/{repository_name}/tree/{branch}/{path}"
+  # CRITICAL: Template required for theme to render the Launch button
+  url_template: "https://github.com/{repository_user}/{repository_name}/tree/{branch}/{path}" 
 
 # --- HTML / THEME CONFIGURATION ---
 html:
-  # CRITICAL: Base URL for GitHub Pages deployment (the repo name)
+  # CRITICAL: Base URL for GitHub Pages deployment
   baseurl: /133Teach/
   
-  # Buttons that appear next to the Launch button
+  # Ensure these functional buttons are enabled
   use_issues_button: true
   use_repository_button: true
   
   html_theme_options:
-    # Set the kernel server URL to your GitHub Pages domain to prevent Binder fallback
-    thebe:
-      # Explicitly set the base URL for the kernel connection
-      kernel_server_url: "https://btmannin5132.github.io"
-      
-      # Optional: Remove the MyBinder URL from the theme options
-      binder_url: ""
+    # CRITICAL FIX: This forces the theme to draw the rocket icon template.
+    launch_buttons:
+      binder: true 
 
-# --- LAUNCH BUTTONS (Thebe / JupyterLite) ---
+# --- LAUNCH BUTTONS (JupyterLite) ---
 launch_buttons:
-  # 1. CRITICAL: Disable Thebe entirely to stop the MyBinder pop-up.
-  thebe: false 
-  
-  # 2. Re-enable the generic launch button (The rocket icon). 
-  #    JupyterLite is guaranteed to override this link locally.
+  # 1. Enable the Launch button template (must be 'true' to render)
   binder: true 
   
-  # 3. CRITICAL: Set the launch destination interface.
-  notebook_interface: "jupyterlab"
+  # 2. Disable the buggy Thebe inline execution
+  thebe: false 
   
-  # 4. Use the correct relative path for the live site.
-  jupyterlite_url: "/133Teach/lite"
+  # 3. CRITICAL: Tells the Launch button where the assets are located
+  jupyterlite_url: "/133Teach/lite" 
+  
+  # 4. Interface settings
+  notebook_interface: "jupyterlab"
   
   kernel_start_options:
     # Must match your built JupyterLite kernel name
