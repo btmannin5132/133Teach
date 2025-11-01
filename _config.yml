@@ -40,7 +40,7 @@ launch_buttons:
   binder: false
   notebook_interface: "jupyterlab"
   thebe: true
-  binderhub_url: ""
+  # binderhub_url: ""
   kernel_start_options:
     # This must match your JupyterLite kernel name
     kernel_name: python
