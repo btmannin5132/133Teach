@@ -1,27 +1,16 @@
-/* _static/custom.css */
+/* _static/custom.css - Final Universal Fix */
 
-/* Hides the entire dropdown menu item (<li>) that contains the text "mybinder" */
-li a[data-text*="mybinder"],
-li a[data-text*="mybinder"] > span {
-    display: none !important;
-}
-
-/* Fallback for the dropdown item text */
-li a[data-original-title*="mybinder"] {
-    display: none !important;
-}
-
-/* _static/custom.css */
-
-/* Targets the specific text element within Thebe's launch modal/popup */
-.thebe-launching-message p:contains("mybinder.org") {
-    display: none !important;
-}
-
-/* Fallback for the entire loading message */
+/* 1. Hides the entire Thebe loading pop-up message (most reliable way) */
 .thebe-launching-message {
-    /* If the message is still visible, you can change the text */
-    /* content: "Launching Local Environment..." !important; */
-    /* Or hide it completely */
+    display: none !important;
+}
+
+/* 2. Hides the "Launching from mybinder.org" text from the dropdown (if present) */
+li a[title*="mybinder.org"] {
+    display: none !important;
+}
+
+/* 3. A general fallback to hide any element containing that title text */
+[data-original-title*="mybinder.org"] {
     display: none !important;
 }
