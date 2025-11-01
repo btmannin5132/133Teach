@@ -40,7 +40,7 @@ launch_buttons:
   binder: true
   notebook_interface: "jupyterlab"
   thebe: true
-  binderhub_url: "your browser"
+  binderhub_url: ""
   
 # binder:
 #   url: https://github.com/btmannin5132/133Teach
