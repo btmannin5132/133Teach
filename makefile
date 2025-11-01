@@ -8,6 +8,7 @@ clean:
 
 build:
 	jupyter-book build .
+	cp -r _output _build/html/lite
 
 push:
 	git add .
