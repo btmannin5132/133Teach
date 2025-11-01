@@ -40,6 +40,7 @@ launch_buttons:
   binder: false
   notebook_interface: "jupyterlab"
   thebe: true
+  jupyterlite_url: "/133Teach/_build/html/lite"
   # binderhub_url: ""
   kernel_start_options:
     # This must match your JupyterLite kernel name
