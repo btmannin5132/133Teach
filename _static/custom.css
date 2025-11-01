@@ -1,9 +1,12 @@
-/* Hide the misleading "launching from mybinder.org" text */
-.header-article-items .dropdown-item-label[data-text="Launching from mybinder.org"] {
+/* _static/custom.css */
+
+/* Hides the entire dropdown menu item (<li>) that contains the text "mybinder" */
+li a[data-text*="mybinder"],
+li a[data-text*="mybinder"] > span {
     display: none !important;
 }
 
-/* For some themes, the label might be nested differently: */
-.header-article-items .dropdown-item-label:contains("mybinder") {
+/* Fallback for the dropdown item text */
+li a[data-original-title*="mybinder"] {
     display: none !important;
 }
