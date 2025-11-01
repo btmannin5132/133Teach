@@ -1,0 +1,37 @@
+{
+  "LiteBuildConfig": {
+    "apps": [
+      {
+        "name": "lab"
+      },
+      {
+        "name": "notebook"
+      }
+    ],
+    "contents": [
+      {
+        "src": "**.ipynb"
+      },
+      {
+        "src": "**.md"
+      }
+    ]
+  },
+  "JupyterLiteConfig": {
+    "federated_extensions": [
+      "@jupyterlite/pyodide-kernel-extension"
+    ],
+    "ignore_files": [
+      "**/matlab/**",
+      "**/postbuild/**"
+    ],
+    "piplite_urls": [
+      "https://pypi.org/simple/"
+    ],
+    "lite_packages": [
+      "numpy",
+      "pandas",
+      "matplotlib"
+    ]
+  }
+}

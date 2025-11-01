@@ -34,14 +34,15 @@ html:
 # launch_buttons:
 #   thebe: true
 #   binder: true # Explicitly enables the full Binder launch button/icon
+execute:
+  execute_notebooks: force
 
 launch_buttons:
+  binder: true
   notebook_interface: "jupyterlab"
+  
   
 # binder:
 #   url: https://github.com/btmannin5132/133Teach
 #   branch: main 
 #   binderhub_url: "https://mybinder.org"
-
-execute:
-  execute_notebooks: force

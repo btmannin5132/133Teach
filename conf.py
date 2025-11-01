@@ -1,32 +1,26 @@
-# conf.py
+import sys
 
-# -- Project information -----------------------------------------------------
+# Try to import the package that should be loaded
+try:
+    import jupyterlite_sphinx
+    #print("--- JUPYTERLITE_SPHINX WAS FOUND ---")
+except ImportError:
+    print("--- ERROR: JUPYTERLITE_SPHINX NOT FOUND IN THIS ENVIRONMENT ---")
+    sys.exit(1) # Stop the build with an error to highlight the issue
 
+# --- Restore a minimal working config for the test ---
 project = 'ENGR 133 Teach'
 copyright = '2025, Ben Manning'
 author = 'Ben Manning'
 
-# -- General configuration ---------------------------------------------------
-
-# Add any Sphinx extension module names here, as strings.
 extensions = [
-    # Built-in extensions that Jupyter Book relies on
     'jupyterbook_sphinx',
-    # The key extension for in-browser interactivity
-    'jupyterlite_sphinx',
+    # Keep the extension here so Sphinx tries to load it after the import test
+    'jupyterlite_sphinx' 
 ]
 
-# The suffix(es) of source filenames.
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.ipynb': 'jupyter_notebook',
-    '.md': 'markdown',
-}
-
-# The root toctree document.
-root_doc = 'intro' # Change 'intro' to the name of your index/landing page file (e.g., 'index')
-
-# -- Options for HTML output -------------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.
+source_suffix = {'.ipynb': 'jupyter_notebook', '.md': 'markdown'}
+root_doc = 'intro'
 html_theme = 'sphinx_book_theme'
+
+html_builders = ['jupyterlite']
