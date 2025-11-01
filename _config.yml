@@ -46,3 +46,22 @@ launch_buttons:
 #   url: https://github.com/btmannin5132/133Teach
 #   branch: main 
 #   binderhub_url: "https://mybinder.org"
+
+# In _config.yml
+
+html:
+  # ... (your existing html config, like use_issues_button: true)
+  
+  # New block to override the theme's default text
+  html_theme_options:
+    # This is the string the theme uses for the launch button text. 
+    # Setting it to an empty string ("") removes the misleading text.
+    launch_buttons:
+      binderhub_url: ""
+      
+      # CRITICAL OVERRIDE: Remove the default descriptive text
+      repository_url: ""  # Also remove the text for the repository link
+      path_to_docs: ""    # And remove the text for the source code link
+      
+      # The main text for the launch button link. Set to empty string
+      launch_buttons_text: ""
