@@ -30,16 +30,16 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  baseurl: /133Teach/
 
 # launch_buttons:
 #   thebe: true
 #   binder: true # Explicitly enables the full Binder launch button/icon
-execute:
-  execute_notebooks: force
 
 launch_buttons:
   binder: true
   notebook_interface: "jupyterlab"
+  thebe: true
   
   
 # binder:
