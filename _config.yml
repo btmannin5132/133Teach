@@ -1,19 +1,25 @@
-# Cleaned _config.yml
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
 
 title: Manning-ENGR133
 author: Ben Manning
 logo: logo.png
 
+# --- EXECUTION ---
+# Force re-execution of notebooks on each build.
 execute:
   execute_notebooks: force
 
+# Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
 
+# Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
 
+# --- REPOSITORY & GITHUB BUTTONS ---
 repository:
   url: https://github.com/btmannin5132/133Teach
   path_to_book: root
@@ -21,32 +27,36 @@ repository:
 
 # --- HTML / THEME CONFIGURATION ---
 html:
-  use_issues_button: true
-  use_repository_button: true
+  # CRITICAL: Base URL for GitHub Pages deployment (the repo name)
   baseurl: /133Teach/
   
+  # Buttons that appear next to the Launch button
+  use_issues_button: true
+  use_repository_button: true
+  
   html_theme_options:
-    # Explicitly silence the mybinder text via theme options
-    launch_buttons:
-      binderhub_url: ""
-
+    # Set the kernel server URL to your GitHub Pages domain to prevent Binder fallback
     thebe:
-      # CRITICAL: Tell Thebe where the local kernel server is
-      repository_url: "/133Teach/_build/html/lite"
-      binder_url: "" # Silence the external binder URL
+      # Explicitly set the base URL for the kernel connection
       kernel_server_url: "https://btmannin5132.github.io"
+      
+      # Optional: Remove the MyBinder URL from the theme options
+      binder_url: ""
 
-# --- LAUNCH BUTTONS (Thebe) ---
+# --- LAUNCH BUTTONS (Thebe / JupyterLite) ---
 launch_buttons:
-  # 1. Disable the dropdown button that links to mybinder.org/lite
+  # 1. Disable the dropdown button that links to external services
   binder: false 
   
   # 2. Enable the 'Live Code' button for inline execution
   thebe: true 
   
-  # 3. Necessary for Thebe to connect locally
-  jupyterlite_url: "/133Teach/_build/html/lite" 
+  # 3. CRITICAL: The path to the JupyterLite assets, relative to the baseurl
+  jupyterlite_url: "/133Teach/lite" 
+  
+  # 4. Interface settings
   notebook_interface: "jupyterlab"
   
   kernel_start_options:
+    # Must match your built JupyterLite kernel name
     kernel_name: python
