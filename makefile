@@ -7,7 +7,7 @@ clean:
 	rm -rf .jupyter_cache
 
 build:
-	jupyter-book build .
+	/home/codespace/.python/current/bin/jupyter-book build .
 	cp -r _output _build/html/lite
 
 push:

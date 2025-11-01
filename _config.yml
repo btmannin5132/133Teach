@@ -34,6 +34,7 @@ html:
       # CRITICAL: Tell Thebe where the local kernel server is
       repository_url: "/133Teach/_build/html/lite"
       binder_url: "" # Silence the external binder URL
+      kernel_server_url: "https://btmannin5132.github.io"
 
 # --- LAUNCH BUTTONS (Thebe) ---
 launch_buttons:
