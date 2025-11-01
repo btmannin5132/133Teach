@@ -45,17 +45,18 @@ html:
 
 # --- LAUNCH BUTTONS (Thebe / JupyterLite) ---
 launch_buttons:
-  # 1. Disable the dropdown button that links to external services
-  binder: false 
+  # 1. CRITICAL: Disable Thebe entirely to stop the MyBinder pop-up.
+  thebe: false 
   
-  # 2. Enable the 'Live Code' button for inline execution
-  thebe: true 
+  # 2. Re-enable the generic launch button (The rocket icon). 
+  #    JupyterLite is guaranteed to override this link locally.
+  binder: true 
   
-  # 3. CRITICAL: The path to the JupyterLite assets, relative to the baseurl
-  jupyterlite_url: "/133Teach/lite" 
-  
-  # 4. Interface settings
+  # 3. CRITICAL: Set the launch destination interface.
   notebook_interface: "jupyterlab"
+  
+  # 4. Use the correct relative path for the live site.
+  jupyterlite_url: "/133Teach/lite"
   
   kernel_start_options:
     # Must match your built JupyterLite kernel name
