@@ -40,16 +40,9 @@ html:
 
 # --- LAUNCH BUTTONS (JupyterLite) ---
 launch_buttons:
-  # 1. Enable the Launch button template (must be 'true' to render)
   binder: true 
-  
-  # 2. Disable the buggy Thebe inline execution
   thebe: false 
-  
-  # 3. CRITICAL: Tells the Launch button where the assets are located
-  jupyterlite_url: "/133Teach/lite" 
-  
-  # 4. Interface settings
+  jupyterlite_url: "lite"
   notebook_interface: "jupyterlab"
   
   kernel_start_options:
