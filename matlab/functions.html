@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MATLAB Intro &#8212; Manning-ENGR133</title>
+    <title>Functions in MATLAB (Or Octave) &#8212; Manning-ENGR133</title>
   
   
   
@@ -57,10 +57,10 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'matlab/matlabStart';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'matlab/functions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="norm() Explaination" href="../python/teamProject/normExplaination.html" />
+    <link rel="prev" title="Plotting in MATLAB/Octave" href="plotting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -201,9 +201,15 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../python/teamProject/normExplaination.html">norm() Explaination</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 10</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 11</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="setupoctave.html">Octave</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_start.html">Getting Started in MATLAB/Octave</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 12</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">MATLAB Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting in MATLAB/Octave</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Functions in MATLAB (Or Octave)</a></li>
 </ul>
 
     </div>
@@ -306,7 +312,7 @@
       
       
       
-      <li><a href="https://github.com/btmannin5132/133Teach/issues/new?title=Issue%20on%20page%20%2Fmatlab/matlabStart.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/btmannin5132/133Teach/issues/new?title=Issue%20on%20page%20%2Fmatlab/functions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -336,7 +342,7 @@
       
       
       
-      <li><a href="../_sources/matlab/matlabStart.ipynb" target="_blank"
+      <li><a href="../_sources/matlab/functions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +413,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -418,11 +426,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>MATLAB Intro</h1>
+    <h1>Functions in MATLAB (Or Octave)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-syntax">Function Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-sure-you-run-your-functions-before-calling-them">Make sure you run your functions before calling them!</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -432,18 +449,48 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="matlab-intro">
-<h1>MATLAB Intro<a class="headerlink" href="#matlab-intro" title="Link to this heading">#</a></h1>
-<p>Note:  We are using an Octave Kernel instead of MATLAB.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="functions-in-matlab-or-octave">
+<h1>Functions in MATLAB (Or Octave)<a class="headerlink" href="#functions-in-matlab-or-octave" title="Link to this heading">#</a></h1>
+<p>Just like in Python, we can make functions and run them to break up our code.  There are a few things to remember, especially when working with the expectations of the autograder for the course.</p>
+<ol class="arabic simple">
+<li><p>Functions should be in their own file, that is named the same name as the function.</p>
 <ul class="simple">
-<li><p>Open source, free, and can run on a potato.</p></li>
+<li><p>If you have a function called  <code class="docutils literal notranslate"><span class="pre">count</span></code>, your file for the function should be named <code class="docutils literal notranslate"><span class="pre">count.m</span></code></p></li>
 </ul>
+</li>
+<li><p>Do not mix standalone executable code (a script) and a function definition in the same file.</p>
+<ul class="simple">
+<li><p>This is mainly an Octave thing.  MATLAB now pre-compiles scripts and functions prior to running them, so it can see fuctions later on in the file.  Octave cannot.</p></li>
+<li><p>A file must be either a script OR a function file. While MATLAB is forgiving, Octave requires a file to start with the function definition if it is a function file IN LINE 1.  Do not add additional comments or anything prior to the function header.</p></li>
+</ul>
+</li>
+<li><p>You can define multiple functions in one file, but it must start with the main, or primary, function. Only this primary function can be called from the command line or another file.</p>
+<ul class="simple">
+<li><p>Any subsequent functions in the file are called subfunctions (or helper functions) and are private, meaning they can only be called by the primary function or other subfunctions within that same file.</p></li>
+</ul>
+</li>
+</ol>
+<section id="function-syntax">
+<h2>Function Syntax<a class="headerlink" href="#function-syntax" title="Link to this heading">#</a></h2>
+<p>The syntax to make a function in MATLAB/Octave is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">[output1,</span> <span class="pre">output2,</span> <span class="pre">...]</span> <span class="pre">=</span> <span class="pre">functionName(input1,</span> <span class="pre">input2,</span> <span class="pre">...)</span></code></p>
+<p>This line must be in LINE 1 of the file, and the file name should be same as the function name.
+The function will be called just like a function in python where a script (or other function) can call <code class="docutils literal notranslate"><span class="pre">[out1,out2]</span> <span class="pre">=</span> <span class="pre">functionName(a,b,c,...)</span></code> and then the variables <code class="docutils literal notranslate"><span class="pre">out1</span></code> and <code class="docutils literal notranslate"><span class="pre">out2</span></code> can be used in different parts of the code.</p>
+<p>Inside the function, you do not need to use <code class="docutils literal notranslate"><span class="pre">return</span></code> or anything like that, just make sure you are defining your output variables inside of the function.  Once the function reaches the <code class="docutils literal notranslate"><span class="pre">end</span></code>, it sends the variables listed in the function header to the output of the function.</p>
+<p>You can also call a null function, meaning it doesn’t return any values by setting up a function like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">functionName(input1,</span> <span class="pre">input2,</span> <span class="pre">...)</span></code></p>
+</section>
+<section id="make-sure-you-run-your-functions-before-calling-them">
+<h2>Make sure you run your functions before calling them!<a class="headerlink" href="#make-sure-you-run-your-functions-before-calling-them" title="Link to this heading">#</a></h2>
+<p>MATLAB and Octave are scripting languages, meaning they basically just run the commands from a script or function in order in a command line.  If you plan on having some variables ready, or some functions that are not directly saved in a file, make sure they are initialized (sent into the command line) prior to using them.</p>
+<p>In order for this book to work, run the following code in order, otherwise you will get ‘undefined function’ errors. (Or feel free to refresh the page and run them in different orders to see what happens)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="p">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="n">x</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">];</span>
-<span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>output<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">equation1</span><span class="p">(</span>x,y,z<span class="p">)</span>
+
+<span class="w">    </span><span class="n">output</span> <span class="p">=</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">8</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">z</span><span class="p">;</span>
+
+<span class="k">end</span> 
 </pre></div>
 </div>
 </div>
@@ -495,6 +542,182 @@ The qt toolkit is recommended instead.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>[value_1,value_2,value_3]<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">equation2</span><span class="p">(</span>q,r,s<span class="p">)</span>
+
+<span class="w">    </span><span class="n">value_1</span> <span class="p">=</span> <span class="n">q</span> <span class="o">*</span> <span class="n">r</span><span class="p">;</span>
+    <span class="n">value_2</span> <span class="p">=</span> <span class="p">(</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="p">;</span>
+    <span class="n">value_3</span> <span class="p">=</span> <span class="n">s</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">q</span><span class="p">);</span>
+
+<span class="k">end</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="p">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">b</span> <span class="p">=</span> <span class="mi">9</span><span class="p">;</span>
+<span class="n">c</span> <span class="p">=</span> <span class="mi">4</span><span class="p">;</span>
+
+<span class="n">equation_result</span> <span class="p">=</span> <span class="n">equation1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">equation_result</span><span class="p">)</span>
+
+
+<span class="p">[</span><span class="n">result_1</span><span class="p">,</span> <span class="n">result_2</span><span class="p">,</span> <span class="n">result_3</span><span class="p">]</span> <span class="p">=</span> <span class="n">equation2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="n">result_1</span><span class="p">)</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="n">result_2</span><span class="p">)</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="n">result_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95.500
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
 
 ?2004h
 </pre></div>
@@ -525,12 +748,49 @@ The qt toolkit is recommended instead.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27
+?2004h
 </pre></div>
 </div>
-<img alt="../_images/75949db85fe7cea39b8e19ff9999e5bbcb52b4337815be2da8025f8a65f251ff.png" src="../_images/75949db85fe7cea39b8e19ff9999e5bbcb52b4337815be2da8025f8a65f251ff.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>89
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+
+?2004h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.5000
+?2004h
+</pre></div>
 </div>
 </div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -564,12 +824,12 @@ The qt toolkit is recommended instead.
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../python/teamProject/normExplaination.html"
+       href="plotting.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">norm() Explaination</p>
+        <p class="prev-next-title">Plotting in MATLAB/Octave</p>
       </div>
     </a>
 </div>
@@ -578,6 +838,22 @@ The qt toolkit is recommended instead.
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-syntax">Function Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-sure-you-run-your-functions-before-calling-them">Make sure you run your functions before calling them!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
