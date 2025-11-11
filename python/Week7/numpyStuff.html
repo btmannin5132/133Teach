@@ -474,26 +474,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1D Array:
-[1 2 3 4 5]
-Shape: (5,)
-Type: int64
-
-2D Array:
-[[10 20 30]
- [40 50 60]]
-Shape: (2, 3)
-
-Array of Zeros:
-[[0. 0. 0.]
- [0. 0. 0.]]
-
-Array from a Range:
-[0 2 4 6 8]
-</pre></div>
-</div>
-</div>
 </div>
 <p>Why bother with NP arrays?
 Lists are more work</p>
@@ -528,14 +508,6 @@ Lists are more work</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Improperly Doubled list: [1, 2, 3, 4, 1, 2, 3, 4]
-Python List Doubled with Loop: [2, 4, 6, 8]
-Python List Doubled properly: [2, 4, 6, 8]
-NumPy Array Double: [2 4 6 8]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -558,12 +530,6 @@ NumPy Array Double: [2 4 6 8]
 <span class="n">sqrt_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">array_d</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NumPy Square Roots: </span><span class="si">{</span><span class="n">sqrt_array</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>List Square Roots: [2.0, 3.0, 4.0]
-NumPy Square Roots: [2. 3. 4.]
 </pre></div>
 </div>
 </div>
@@ -592,14 +558,6 @@ NumPy Square Roots: [2. 3. 4.]
 <span class="c1"># Comparison (returns a boolean array)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a &gt; 2: </span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a + b: [11 22 33 44]
-a * 2: [2 4 6 8]
-sin(a): [ 0.84147098  0.90929743  0.14112001 -0.7568025 ]
-a &gt; 2: [False False  True  True]
 </pre></div>
 </div>
 </div>
@@ -648,32 +606,6 @@ a &gt; 2: [False False  True  True]
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original Matrix:
-[[10 11 12]
- [20 21 22]
- [30 31 32]]
-
-Element at [1, 2]: 22
-
-Last value:
-32
-
-First two rows:
-[[10 11 12]
- [20 21 22]]
-
-Last row:
-[30 31 32]
-
-Second column:
-[11 21 31]
-
-Last column:
-[12 22 32]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -697,19 +629,6 @@ Last column:
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A[1]: </span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A[1][2]: </span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A[0:2,0:2]:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list[1]: [120, 110, 65, 50]
-list[1][2]: 65
-
-A[1]: [120 110  65  50]
-A[1][2]: 65
-
-A[0:2,0:2]:
- [[127 126]
- [120 110]]
 </pre></div>
 </div>
 </div>
@@ -740,21 +659,6 @@ A[0:2,0:2]:
 <span class="c1"># Calculate the standard deviation along an axis (axis=1 means rows)</span>
 <span class="n">std_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Standard Deviation per Row (axis=1): </span><span class="si">{</span><span class="n">std_row</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data Array:
-[[1 5 3]
- [7 2 9]]
-
-Overall Mean: 4.5
-
-Overall Sum: 27
-
-Minimum per Column (axis=0): [1 2 3]
-
-Standard Deviation per Row (axis=1): [1.63299316 2.94392029]
 </pre></div>
 </div>
 </div>
