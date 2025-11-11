@@ -1,5 +1,5 @@
 # Octave
-Octave is an open source version of MATLAB that you can install on computers, inside of codespace, and run inside of VSCode. (I have a hunch this will work better for liveshare than MATLAB does, but I don't have data to back that up yet.)
+Octave is an open source version of MATLAB that you can install on computers, inside of codespace, and run inside of VSCode.
 
 Octave has the vast majority of the capabilites as MATLAB, but is much more light weight, and free.  There are a few functions that don't work quite the same way, but there are ways around the majority of them, especially for ENGR133.
 
