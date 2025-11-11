@@ -915,8 +915,8 @@ The qt toolkit is recommended instead.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0.6713   0.7946
-   0.3403   0.5478
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   0.1512   0.5120
+   0.6489   0.8937
 ?2004h
 </pre></div>
 </div>
@@ -1331,40 +1331,34 @@ The sum of the numbers [10, 20, 30, 40] is: 100
 <p>While loops are nearly identical in MATLAB as they are in Python, just don’t forget your <code class="docutils literal notranslate"><span class="pre">end</span></code>!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="c">% guessing_game.m</span>
-<span class="c">% A script demonstrating a while loop and the &#39;break&#39; statement.</span>
+<div class="highlight-octave notranslate"><div class="highlight"><pre><span></span><span class="c">% simple_while_counter.m</span>
+<span class="c">% Demonstrates a while loop using only an internal counter.</span>
 
-<span class="n">secret_number</span> <span class="p">=</span> <span class="mi">7</span><span class="p">;</span>
-<span class="n">guess</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c">% Initialize guess to ensure the while condition starts true</span>
-<span class="n">guess_count</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">current_value</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">max_value</span> <span class="p">=</span> <span class="mi">5</span><span class="p">;</span>
 
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Welcome to the Guessing Game! Try to guess the secret number (1-10).\n&#39;</span><span class="p">);</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Starting count...\n&#39;</span><span class="p">);</span>
 
-<span class="c">% The loop continues as long as the guess does NOT equal the secret number.</span>
-<span class="k">while</span> <span class="n">guess</span> <span class="o">~=</span> <span class="n">secret_number</span>
-    <span class="c">% Get the user&#39;s guess</span>
-    <span class="n">guess</span> <span class="p">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&#39;Your guess: &#39;</span><span class="p">);</span>
-    <span class="n">guess_count</span> <span class="p">=</span> <span class="n">guess_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-
-    <span class="c">% Check the guess</span>
-    <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">secret_number</span>
-        <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Too high. Try again.&#39;</span><span class="p">);</span>
-    <span class="k">elseif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">secret_number</span>
-        <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Too low. Try again.&#39;</span><span class="p">);</span>
-    <span class="k">end</span>
+<span class="c">% The loop continues as long as current_value is less than or equal to max_value.</span>
+<span class="k">while</span> <span class="n">current_value</span> <span class="o">&lt;</span><span class="p">=</span> <span class="n">max_value</span>
+    <span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Current value is: %d\n&#39;</span><span class="p">,</span> <span class="n">current_value</span><span class="p">);</span>
+    
+    <span class="c">% Increment the counter. This is crucial to prevent an infinite loop.</span>
+    <span class="n">current_value</span> <span class="p">=</span> <span class="n">current_value</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> 
 <span class="k">end</span>
 
-<span class="c">% This code runs only when the while loop condition becomes false (guess == secret_number)</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Congratulations! You guessed the secret number (%d) in %d tries.\n&#39;</span><span class="p">,</span> <span class="n">secret_number</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">);</span>
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Loop finished.\n&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to the Guessing Game! Try to guess the secret number (1-10).
-Too low. Try again.
-Your guess:__stdin_prompt&gt;
-
-Your guess:__stdin_prompt&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting count...
+Current value is: 1
+Current value is: 2
+Current value is: 3
+Current value is: 4
+Current value is: 5
+Loop finished.
 </pre></div>
 </div>
 </div>
