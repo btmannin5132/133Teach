@@ -551,6 +551,25 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># You can split images without the image library too</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># (like for your project and work with the pixels individually)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1">#check if image formatting is correct </span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># if the  img.dtype is not np.float32 and/or img.dtype is not np.float64</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Take the rgb values from 0-255 to 0-1</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1">#find the middle of the image with img.shape</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="ne">NameError</span>: name &#39;file_name&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
