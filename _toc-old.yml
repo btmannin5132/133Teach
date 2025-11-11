@@ -28,12 +28,6 @@ parts:
     chapters:
       - file: python/teamProject/normExplaination
       
-  - caption: Week 11
+  - caption: Week 10
     chapters:
-      - file: matlab/setupoctave
-      - file: matlab/matlab_start
-  
-  - caption: Week 12
-    chapters:
-      - file: matlab/plotting
-      - file: matlab/functions
+      - file: matlab/matlabStart
