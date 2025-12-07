@@ -28,8 +28,13 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
+  theme:
+    name: sphinx_book_theme
+    options:
+      default_mode: dark
   use_issues_button: true
   use_repository_button: true
+  use_folder_names: false
 
 launch_buttons:
   thebe: true
