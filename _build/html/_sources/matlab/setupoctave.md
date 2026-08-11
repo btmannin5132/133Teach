@@ -39,3 +39,18 @@ Available kernels:
   python3    /home/codespace/.local/share/jupyter/kernels/python3
 ```
 After making your .ipynb file, and opening up a code section, select the Octave kernel from the kernel list. 
+
+## Publishing Octave like MATLAB
+
+For ENGR 133, we have been asking students to publish their MATLAB scripts so we can see the outputs without having to run the scripts.  This may get removed at some point if our atuograder improves, but for now, this is still expected.  Octave does not have a designated publish option, so in order to print a similar document, we need to go about it a little differently.
+
+1. Use this [octavePublish.m](/matlab/octavePublish.m) file in your prefered location.  (This does work in codespaces)
+2. This file generates a .md, or markdown file, essentially a fancy text file.  In order to export it to a pdf, I reccomend using the 'Markdown PDF' by yzane' in VScode/codespaces
+3. In the .m file, change the publisher to your name, and then make a struct type for each script/function you are publishing.  Each struct needs 4 pieces of information: 
+  - 'target_file', string of the file you are trying to publish
+  - 'args', list of arguments inputed.  This can be blank if it is a script, or an argumentless function
+  - 'is_function', boolean of if this is a function or not
+  - 'num_outputs', count of expected outputs
+Nearly all of these are setup for functions, but still include if you are publishing a script, that way it can be all done with one file.
+4. Execute the script, it should generate a .md file in the same directory as the publishing function
+5. Use the markdown->pdf converter to make a pdf.
