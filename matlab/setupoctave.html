@@ -445,6 +445,7 @@
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-octave">Installing Octave</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-using-juypter-books-mainly-for-instructors">If using Juypter Books (mainly for instructors)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-octave-like-matlab">Publishing Octave like MATLAB</a></li>
 </ul>
             </nav>
         </div>
@@ -495,6 +496,26 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </pre></div>
 </div>
 <p>After making your .ipynb file, and opening up a code section, select the Octave kernel from the kernel list.</p>
+</section>
+<section id="publishing-octave-like-matlab">
+<h2>Publishing Octave like MATLAB<a class="headerlink" href="#publishing-octave-like-matlab" title="Link to this heading">#</a></h2>
+<p>For ENGR 133, we have been asking students to publish their MATLAB scripts so we can see the outputs without having to run the scripts.  This may get removed at some point if our atuograder improves, but for now, this is still expected.  Octave does not have a designated publish option, so in order to print a similar document, we need to go about it a little differently.</p>
+<ol class="arabic simple">
+<li><p>Use this <a class="reference download internal" download="" href="../_downloads/06d9779eab2e98bf4ce787a04020b325/octavePublish.m"><span class="xref download myst">octavePublish.m</span></a> file in your prefered location.  (This does work in codespaces)</p></li>
+<li><p>This file generates a .md, or markdown file, essentially a fancy text file.  In order to export it to a pdf, I reccomend using the ‘Markdown PDF’ by yzane’ in VScode/codespaces</p></li>
+<li><p>In the .m file, change the publisher to your name, and then make a struct type for each script/function you are publishing.  Each struct needs 4 pieces of information:</p></li>
+</ol>
+<ul class="simple">
+<li><p>‘target_file’, string of the file you are trying to publish</p></li>
+<li><p>‘args’, list of arguments inputed.  This can be blank if it is a script, or an argumentless function</p></li>
+<li><p>‘is_function’, boolean of if this is a function or not</p></li>
+<li><p>‘num_outputs’, count of expected outputs
+Nearly all of these are setup for functions, but still include if you are publishing a script, that way it can be all done with one file.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Execute the script, it should generate a .md file in the same directory as the publishing function</p></li>
+<li><p>Use the markdown-&gt;pdf converter to make a pdf.</p></li>
+</ol>
 </section>
 </section>
 
@@ -566,6 +587,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-octave">Installing Octave</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-using-juypter-books-mainly-for-instructors">If using Juypter Books (mainly for instructors)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-octave-like-matlab">Publishing Octave like MATLAB</a></li>
 </ul>
   </nav></div>
 
