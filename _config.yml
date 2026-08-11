@@ -38,7 +38,7 @@ html:
 
 launch_buttons:
   thebe: true
-  # binder: true # Explicitly enables the full Binder launch button/icon
+  binder: true # Explicitly enables the full Binder launch button/icon
   
 binder:
   url: https://github.com/btmannin5132/133Teach
