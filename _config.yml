@@ -22,8 +22,8 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/btmannin5132/133Teach  # Online location of your book
-  path_to_book: root  # Optional path to your book, relative to the repository root
-  branch: gh-pages
+  path_to_book: ""  # Optional path to your book, relative to the repository root
+  branch: main
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -38,8 +38,8 @@ html:
 
 launch_buttons:
   thebe: true
-  binder: true # Explicitly enables the full Binder launch button/icon
-  
+  binder: true 
+
 binder:
   url: https://github.com/btmannin5132/133Teach
   branch: main 
