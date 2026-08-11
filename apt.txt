@@ -1,7 +1,7 @@
 # apt.txt
 octave
 gnuplot
-liboctave-dev
+octave-dev
 ghostscript
 gnuplot-x11
 fontconfig

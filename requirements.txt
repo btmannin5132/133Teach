@@ -4,5 +4,4 @@ pandas
 matplotlib
 ghp-import
 ipykernel
-octave
 octave_kernel
