@@ -1,0 +1,14 @@
+{
+  "name": "JupyterBook Octave Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "yzane.markdown-pdf"
+      ]
+    }
+  },
+"postCreateCommand": ".devcontainer/post.sh"
+}
