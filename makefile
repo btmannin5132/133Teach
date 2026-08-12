@@ -7,7 +7,7 @@ clean:
 	rm -rf .jupyter_cache
 
 build:
-	octave --no-gui --eval 'warning ("off", "all");'
+	python -c "import octave_kernel, os; open(os.path.join(os.path.dirname(octave_kernel.__file__), 'octaverc.m'), 'a').write('\nwarning(\"off\", \"all\");\n')"
 	jupyter-book build .
 
 push:
