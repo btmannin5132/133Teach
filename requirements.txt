@@ -1,5 +1,5 @@
-'jupyter-book<2'
-'ghp-import<2'
+jupyter-book<2
+ghp-import<2
 numpy
 pandas
 matplotlib
