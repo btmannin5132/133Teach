@@ -1,3 +1,11 @@
 #!/bin/bash
 
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/octave/${OCTAVE_VERSION}/"
+
+octave --no-gui --eval 'pkg install -forge fltk;'
+
+octave --no-gui --eval 'pkg load fltk; graphics_toolkit ("fltk");'
+
 octave --no-gui --eval 'warning ("off", 'all');'
+
+octave --no-gui --eval 'savepath'
