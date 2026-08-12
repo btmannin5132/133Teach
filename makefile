@@ -7,6 +7,7 @@ clean:
 	rm -rf .jupyter_cache
 
 build:
+	octave --no-gui --eval 'warning ("off", "all");'
 	jupyter-book build .
 
 push:
