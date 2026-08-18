@@ -40,4 +40,4 @@ parts:
 
   - caption: Excel Test
     chapters:
-      - file: 2026/excel/excel.md
+      - file: 2026/excel/excel
