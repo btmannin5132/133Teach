@@ -37,3 +37,7 @@ parts:
     chapters:
       - file: matlab/plotting
       - file: matlab/functions
+
+  - caption: Excel Test
+    chapters:
+      - file: 2026/excel/excel.md
