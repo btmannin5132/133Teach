@@ -32,3 +32,10 @@ parts:
       - file: matlab/matlab_start
       - file: matlab/plotting
       - file: matlab/functions
+
+  - caption: In-Class Examples
+    chapters:
+      - url: https://github.com/btmannin5132/133Teach/tree/main/2025
+        title: 2025 In-class Examples
+      - url: https://github.com/btmannin5132/133Teach/tree/main/2026
+        title: 2026 In-class Examples
