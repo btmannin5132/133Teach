@@ -1,43 +1,34 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: index
 
 parts:
-  - caption: Week 4
+  - caption: Excel
     chapters:
-      - file: python/Week4/vars
-      - file: python/Week4/conditionals
-      - file: python/Week4/booleans
+      - file: 2026/excel/excel
 
-  - caption: Week 5
+  - caption: General Python
     chapters:
-      - file: python/Week5/loops
+      - file: python/vars
+      - file: python/conditionals
+      - file: python/booleans
+      - file: python/numpyStuff
 
-  - caption: Week 6
+  - caption: Python- Loops
     chapters:
-      - file: python/Week6/imgView
+      - file: python/loops
 
-  - caption: Week 7
+  - caption: Python- Image Manipulation Python
     chapters:
-      - file: python/Week7/numpyStuff
-      - file: python/Week7/imageInfo
-  
-  - caption: Team Project
+      - file: python/imgView
+      - file: python/imageInfo
+
+  - caption: Python- Extra Functions
     chapters:
-      - file: python/teamProject/normExplaination
-      
-  - caption: Week 11
+      - file: python/normExplaination
+
+  - caption: MATLAB
     chapters:
       - file: matlab/setupoctave
       - file: matlab/matlab_start
-  
-  - caption: Week 12
-    chapters:
       - file: matlab/plotting
       - file: matlab/functions
-
-  - caption: Excel Test
-    chapters:
-      - file: 2026/excel/excel
