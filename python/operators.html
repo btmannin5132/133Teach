@@ -64,6 +64,8 @@
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Programming Datatypes" href="datatypes.html" />
+    <link rel="prev" title="Excel Test" href="../2026/excel/excel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -151,6 +153,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -160,8 +166,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -220,8 +224,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../2026/excel/excel.html">Excel Test</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Python</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="vars.html">Global Variables</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datatypes.html">Programming Datatypes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vars.html">Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="booleans.html">Boolean Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpyStuff.html">Numpy Arrays</a></li>
@@ -450,7 +456,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -466,6 +474,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-operations">Boolean Operations</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -492,11 +508,17 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#multiplication</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#exponential</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#division</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">//</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#floor division (rounds down)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">%</span><span class="k">4</span>) #modular division (remainder from the division)
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#parentheses and order of opperations are important!</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">4</span><span class="o">*</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -504,13 +526,68 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 -2
 8
+16
 0.5
 0
 2
+48
+18
 </pre></div>
 </div>
 </div>
 </div>
+<section id="boolean-operations">
+<h2>Boolean Operations<a class="headerlink" href="#boolean-operations" title="Link to this heading">#</a></h2>
+<p>There are times where using a simple boolean operation is the fastest way to make a system work.  A boolean is a type of data that is simply a 1 or a 0, <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>, high or low, on or off.  We use booleans in real life too, we just call it true or false usually though, but anything that has only 2 states, such as a general light switch, is technically a boolean operator.</p>
+<p>Whenever we are asking a ‘yes’ or ‘no’ question in programming, such as if something is equal, or greater or less than something, we are asking for a boolean response.  In our flow charts, will ask a yes or no question, and then do something based on the response.  We can do one thing if the statement is <code class="docutils literal notranslate"><span class="pre">true</span></code>, and we can do something different if the statement is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#greater than</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#less than</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#greater than or equal to</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#less than or equal to</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">==</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#equal to (in most programming languages, if we are asking if something is equal, we need to use == instead of =)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">!=</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#not equal</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+False
+True
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also have access to <code class="docutils literal notranslate"><span class="pre">not</span></code> which will output or expect the opposite of whatever is prormpted.  (<code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">true</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">false</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">1</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">1</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">1</span><span class="o">==</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+False
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also ask multiple things at once using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> operators. Check out the <a class="reference external" href="https://btmannin5132.github.io/133Teach/python/booleans.html">boolean page</a> for more information.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -543,12 +620,47 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../2026/excel/excel.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Excel Test</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="datatypes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Programming Datatypes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-operations">Boolean Operations</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

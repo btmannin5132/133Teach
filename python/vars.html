@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Global Variables &#8212; Manning-ENGR133</title>
+    <title>Variables &#8212; Manning-ENGR133</title>
   
   
   
@@ -65,7 +65,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Conditionals" href="conditionals.html" />
-    <link rel="prev" title="Excel Test" href="../2026/excel/excel.html" />
+    <link rel="prev" title="Programming Datatypes" href="datatypes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -153,6 +153,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -221,7 +225,9 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">General Python</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Global Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operators.html">Python Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datatypes.html">Programming Datatypes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="booleans.html">Boolean Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpyStuff.html">Numpy Arrays</a></li>
@@ -450,7 +456,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -461,11 +469,19 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Global Variables</h1>
+    <h1>Variables</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-and-local-variables">Global and Local Variables</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -475,8 +491,68 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="global-variables">
-<h1>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="variables">
+<h1>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h1>
+<p>When we program, we want to store information in places that we can access later.  We are going to call these places ‘variables’ for now.   (later you will learn that we actually store things in registers which can be accessed via their location, but that is for a more advanced programming class).</p>
+<p>We assign values to variabels using <code class="docutils literal notranslate"><span class="pre">=</span></code>.  We can store a bunch of different types of information or data, which can be found on the <a class="reference external" href="https://btmannin5132.github.io/133Teach/python/datatypes.html">datatypes page</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span> <span class="c1">#storing a numeric value in &#39;a&#39; (will equal 3)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># We have some shortcuts we can use for the general math operators</span>
+<span class="c1"># By placing the operator infront of the = sign durign the assignment, that operation will be performed with the value after the sign</span>
+
+<span class="n">a</span> <span class="o">+=</span> <span class="mi">3</span> <span class="c1">#adding 3 to a (will now equal 6)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">-=</span> <span class="mi">3</span> <span class="c1">#subtracting 3 from a (will now equal 3 again)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">*=</span> <span class="mi">3</span> <span class="c1">#multiplying 3 from a (will now equal 9)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">/=</span> <span class="mi">3</span> <span class="c1"># dividing a by 3 (will now equal 3 again)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="c1">#notice that a is now a float instead of an integer (it has a decimal place after it, and before it did not)</span>
+
+<span class="n">a</span> <span class="o">**=</span> <span class="mi">3</span> <span class="c1"># a^3 (will now equal 27)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">//=</span> <span class="mi">3</span> <span class="c1"># floor division by 3 (rounding down, now equal to 9)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">%=</span> <span class="mi">3</span> <span class="c1"># modular devision by 3 (finding the remainder, now equal to 0)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># You can also assign variable values based off of other variables</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">3</span> <span class="c1">#b will now be assigned to 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+
+<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;Hello!&quot;</span> <span class="c1">#storing a string in variable &#39;b&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+6
+3
+9
+3.0
+27.0
+9.0
+0.0
+6
+Hello!
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you are already familiar with programming, you may know that some programming languages have a <code class="docutils literal notranslate"><span class="pre">++</span></code> and a <code class="docutils literal notranslate"><span class="pre">--</span></code> operator that allow you to increment or decrease the specific variable by 1.  Python does not have this, so keep that in mind.</p>
+<section id="global-and-local-variables">
+<h2>Global and Local Variables<a class="headerlink" href="#global-and-local-variables" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A GLOBAL variable, accessible everywhere.</span>
@@ -508,7 +584,7 @@
 
 <span class="c1"># Here&#39;s what happens:</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The menu has been set up. The menu has </span><span class="si">{</span><span class="n">menu_item</span><span class="si">}</span><span class="s2">, and that&#39;s it&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The menu has </span><span class="si">{</span><span class="n">menu_item</span><span class="si">}</span><span class="s2">, and that&#39;s it&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A customer comes in and places an order.&quot;</span><span class="p">)</span>
 <span class="n">order</span><span class="p">()</span>
@@ -537,7 +613,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The menu has been set up. The menu has egg and spam, and that&#39;s it
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The menu has egg and spam, and that&#39;s it
 
 A customer comes in and places an order.
 Customer: I&#39;ll have the spam, egg, sausage, and spam.
@@ -560,6 +636,7 @@ Waitress: Not as much as spam, spam, spam, spam, spam, baked beans, spam and spa
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -593,12 +670,12 @@ Waitress: Not as much as spam, spam, spam, spam, spam, baked beans, spam and spa
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../2026/excel/excel.html"
+       href="datatypes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Excel Test</p>
+        <p class="prev-next-title">Programming Datatypes</p>
       </div>
     </a>
     <a class="right-next"
@@ -616,6 +693,23 @@ Waitress: Not as much as spam, spam, spam, spam, spam, baked beans, spam and spa
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-and-local-variables">Global and Local Variables</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
