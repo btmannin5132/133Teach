@@ -8,6 +8,8 @@ parts:
 
   - caption: General Python
     chapters:
+      - file: python/operators
+      - file: python/datatypes
       - file: python/vars
       - file: python/conditionals
       - file: python/booleans
