@@ -228,9 +228,11 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datatypes.html">Programming Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vars.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Input Function</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="booleans.html">Boolean Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpyStuff.html">Numpy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python- Loops</span></p>
 <ul class="nav bd-sidenav">
@@ -538,8 +540,8 @@
 </div>
 <section id="boolean-operations">
 <h2>Boolean Operations<a class="headerlink" href="#boolean-operations" title="Link to this heading">#</a></h2>
-<p>There are times where using a simple boolean operation is the fastest way to make a system work.  A boolean is a type of data that is simply a 1 or a 0, <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>, high or low, on or off.  We use booleans in real life too, we just call it true or false usually though, but anything that has only 2 states, such as a general light switch, is technically a boolean operator.</p>
-<p>Whenever we are asking a ‘yes’ or ‘no’ question in programming, such as if something is equal, or greater or less than something, we are asking for a boolean response.  In our flow charts, will ask a yes or no question, and then do something based on the response.  We can do one thing if the statement is <code class="docutils literal notranslate"><span class="pre">true</span></code>, and we can do something different if the statement is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>There are times where using a simple boolean operation is the fastest way to make a system work.  A boolean is a type of data that is simply a 1 or a 0, <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>, high or low, on or off.  We use booleans in real life too, we just call it true or false usually though, but anything that has only 2 states, such as a general light switch, is technically a boolean operator.</p>
+<p>Whenever we are asking a ‘yes’ or ‘no’ question in programming, such as if something is equal, or greater or less than something, we are asking for a boolean response.  In our flow charts, will ask a yes or no question, and then do something based on the response.  We can do one thing if the statement is <code class="docutils literal notranslate"><span class="pre">True</span></code>, and we can do something different if the statement is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#greater than</span>
@@ -567,7 +569,7 @@ True
 </div>
 </div>
 </div>
-<p>We also have access to <code class="docutils literal notranslate"><span class="pre">not</span></code> which will output or expect the opposite of whatever is prormpted.  (<code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">true</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">false</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>)</p>
+<p>We also have access to <code class="docutils literal notranslate"><span class="pre">not</span></code> which will output or expect the opposite of whatever is prormpted.  (<code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">True</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">False</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="mi">1</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>
@@ -586,7 +588,8 @@ True
 </div>
 </div>
 </div>
-<p>We can also ask multiple things at once using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> operators. Check out the <a class="reference external" href="https://btmannin5132.github.io/133Teach/python/booleans.html">boolean page</a> for more information.</p>
+<p><strong>Note!</strong> Booleans in Python have the first letter CAPITALIZED.  <code class="docutils literal notranslate"><span class="pre">true</span></code> does not work in Python, make sure to use <code class="docutils literal notranslate"><span class="pre">True</span></code>!
+We can also ask multiple things at once using <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> operators. Check out the <a class="reference external" href="https://btmannin5132.github.io/133Teach/python/booleans.html">boolean page</a> for more information.</p>
 </section>
 </section>
 

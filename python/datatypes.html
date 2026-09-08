@@ -153,6 +153,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -224,9 +228,11 @@
 <li class="toctree-l1"><a class="reference internal" href="operators.html">Python Operations</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Programming Datatypes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vars.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Input Function</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditionals.html">Conditionals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="booleans.html">Boolean Operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpyStuff.html">Numpy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python- Loops</span></p>
 <ul class="nav bd-sidenav">
@@ -452,7 +458,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -468,6 +476,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-datatypes">Combining Datatypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-datatypes">Sequence Datatypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casting-changing-datatypes">Casting/ Changing Datatypes</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -512,6 +530,316 @@
 </div>
 </div>
 </div>
+<section id="combining-datatypes">
+<h2>Combining Datatypes<a class="headerlink" href="#combining-datatypes" title="Link to this heading">#</a></h2>
+<p>Depending on the type of operation you perform on different datatypes will sometimes result in different datatypes, so keep that in mind as you add and subtract and so on. Some of the combinations give errors, those are commented out for the main setup of this page.  Feel free to uncomment when tinkering.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#test Values</span>
+<span class="n">int1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">int2</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">float1</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">float2</span> <span class="o">=</span> <span class="mf">2.5</span>
+
+<span class="n">string1</span> <span class="o">=</span> <span class="s2">&quot;one&quot;</span>
+<span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot;two&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">+</span> <span class="n">int2</span><span class="p">)</span> <span class="c1">#int + int = int</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">*</span> <span class="n">int2</span><span class="p">)</span> <span class="c1">#int * int = int</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">/</span> <span class="n">int2</span><span class="p">)</span> <span class="c1">#int / int = float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">//</span> <span class="n">int2</span><span class="p">)</span> <span class="c1">#int // int = int</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">+</span> <span class="n">float1</span><span class="p">)</span> <span class="c1">#int + float = float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">*</span> <span class="n">float1</span><span class="p">)</span> <span class="c1">#int * float = float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">/</span> <span class="n">float1</span><span class="p">)</span> <span class="c1">#int / float = float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int1</span> <span class="o">//</span> <span class="n">float1</span><span class="p">)</span> <span class="c1">#int // float = int (will almost always be printed as x.0 though)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">float1</span> <span class="o">//</span> <span class="n">int1</span><span class="p">)</span> <span class="c1">#float // int = int (will almost always be printed as x.0 though)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">float1</span> <span class="o">+</span> <span class="n">float2</span><span class="p">)</span> <span class="c1">#float + float = float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">float1</span> <span class="o">*</span> <span class="n">float2</span><span class="p">)</span> <span class="c1">#float * float = float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">float1</span> <span class="o">//</span> <span class="n">float2</span><span class="p">)</span> <span class="c1">#float // float = int (will almost always be printed as x.0 though)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">string1</span> <span class="o">+</span> <span class="n">string2</span><span class="p">)</span> <span class="c1">#str + str = str</span>
+
+<span class="c1">#print(string1 * string2) #str * str = type error</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">string1</span> <span class="o">*</span> <span class="n">int1</span><span class="p">)</span> <span class="c1">#str * int = str</span>
+
+<span class="c1">#print(string1 * float1) #str * float = type error</span>
+
+<span class="c1">#print(string1 / int1) #str / int = type error</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+30
+0.8333333333333334
+0
+
+6.5
+7.5
+3.3333333333333335
+3.0
+0.0
+
+4.0
+3.75
+0.0
+
+onetwo
+oneoneoneoneone
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sequence-datatypes">
+<h2>Sequence Datatypes<a class="headerlink" href="#sequence-datatypes" title="Link to this heading">#</a></h2>
+<p>Sometimes data is more effective when we have a lot of it instead of just one number or string.  For this, we can use sequence datatypes to store multiple pieces of data in a single variable.  Below are some examples, feel free to tinker.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Lists are the most universal datatype in programming.  Often also called arrays (but be careful, arrays are a type used in the numpy libary, and act quite differently)</span>
+<span class="c1">#represented with square brackets</span>
+<span class="c1">#indexing starts at 0</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+
+<span class="c1">#you can get a variety of information about the list too.  Length (len()) tends to be very helpful</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+
+<span class="c1">#Lists are ordered, once you place a value in a certain location, you can always find it in that location</span>
+<span class="c1">#Find different items in the list by using x[i] where x is your variable and i is your location. Note that we start at 0!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1">#Adjust values in a list by either reassigning a location, or we can adjust values using our normal operators</span>
+<span class="n">list1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">list1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">list1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="c1"># You can take a chunk of the list by using [start:stop] as values inside the location area</span>
+<span class="c1">#This is called slicing</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span><span class="c1">#get the First 3 values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span><span class="c1">#get everything after the first 3 values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span> <span class="c1">#get the last 3 values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span> <span class="c1">#get 3 middle values</span>
+
+<span class="c1">#If we want to add values to a list, we need to be careful about doing so.  Do not try to just add directly to the end of a list, you will get an error</span>
+<span class="c1">#list1[11] = 31</span>
+
+<span class="c1">#use the append() function to add things to the end of the list</span>
+<span class="n">list1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+
+<span class="c1">#using the remove() function will remove the first instance of the value provided (be careful with this, but it can be helpful)</span>
+<span class="n">list1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+
+<span class="c1">#Lists can include different datatypes too! just becareful, if you try to do math operations to things that aren&#39;t numbers, you may run into errors!</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+10
+1
+3
+5
+23
+8
+[1, 23, 3]
+[8, 5, 5, 4, 3, 2, 1]
+[3, 2, 1]
+[8, 5, 5]
+[1, 23, 3, 8, 5, 5, 4, 3, 2, 1, 123]
+[1, 23, 8, 5, 5, 4, 3, 2, 1, 123]
+[1, 2, 3, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, True, False]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strings are basically just lists that are characters instead of numbers. Formatting is a little different in places, but not too bad.</span>
+
+<span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;hello There&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="c1">#Instead of neeing to use the append() function, just add stuff to the end using the + operation.</span>
+<span class="n">str1</span> <span class="o">+=</span> <span class="s2">&quot;!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello There
+l
+hello There!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sets are similar to lists, but they can only include unique values</span>
+
+<span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set1</span><span class="p">)</span>
+
+<span class="c1">#add and remove things using the same functions as lists, but remember that if the value already exists, it won&#39;t appear in the set</span>
+<span class="n">set1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set1</span><span class="p">)</span>
+
+<span class="c1">#Sets are unordered, meaning the values can be in any order.  Using an address does not work in sets</span>
+<span class="c1">#print(set1[2])</span>
+<span class="c1">#Instead, use &quot;in&quot; to determine if something is in the set or not</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">in</span> <span class="n">set1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="ow">in</span> <span class="n">set1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4, 5}
+{1, 2, 3, 4, 5, -3}
+True
+False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Tuples are ordered, unmodifiable lists, meaning once you define them, you cannot change them. </span>
+
+<span class="c1">#tuples are defined using parentheses</span>
+
+<span class="n">tup1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tup1</span><span class="p">)</span>
+
+<span class="c1">#You can access the values inside of a tuple the same way you access a value in a list using x[i].  Remember indexing starts at 0!</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tup1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="c1">#You cannot add/append/remove tuples</span>
+<span class="c1">#tup1.append(3)</span>
+
+<span class="c1">#You cannot modify values in tuples</span>
+<span class="c1">#tup1[3] = 9</span>
+
+<span class="c1">#You cannot change locations of values in tuples</span>
+<span class="c1">#tup1[3] = tup1[5]</span>
+
+<span class="c1">#Tuples are helpful if you want to store data, and make sure it doesn&#39;t accidentaly get changed in a different part of your program</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3, 4, 5, 6)
+4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Dictionaries allow us to store data and find it based on a key.  </span>
+<span class="c1">#This is extremely helpful for making classes of variables, such as if we wanted to store information on an RPG character</span>
+
+<span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mr. FumbleFingers&quot;</span><span class="p">,</span> <span class="s2">&quot;class&quot;</span><span class="p">:</span><span class="s2">&quot;Artificer&quot;</span><span class="p">,</span> <span class="s2">&quot;race&quot;</span><span class="p">:</span><span class="s2">&quot;goblin&quot;</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;items&quot;</span><span class="p">:[</span><span class="s2">&quot;wrench&quot;</span><span class="p">,</span><span class="s2">&quot;crossbow&quot;</span><span class="p">,{</span><span class="s2">&quot;bolts&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}]}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">)</span>
+
+<span class="c1">#Dictionaries work by pairing a key with a value.  You can access information by searching for a key</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span> <span class="c1">#If you are finding a list/tuple in a value, you can access the different locations in it like ususal</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="s1">&#39;bolts&#39;</span><span class="p">])</span> <span class="c1">#Want a dictionary in your list in your dictionary?</span>
+
+<span class="c1">#You can add things in dictionaries by assigning a new key to a value</span>
+<span class="n">dict1</span><span class="p">[</span><span class="s2">&quot;mount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Pig&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">)</span>
+
+<span class="c1">#You can also add multpile things by using the update() function</span>
+<span class="n">dict1</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;weakness&quot;</span><span class="p">:</span><span class="s2">&quot;Can&#39;t go anywhere without his pet rock&quot;</span><span class="p">,</span><span class="s2">&quot;trait&quot;</span><span class="p">:</span><span class="s2">&quot;Likes to cook, but no one likes his cooking&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">)</span>
+
+<span class="c1">#you can remove things using the del keyword (a keyword is different than a function, and formatting is a little different, be careful)</span>
+<span class="k">del</span> <span class="n">dict1</span><span class="p">[</span><span class="s2">&quot;mount&quot;</span><span class="p">]</span> <span class="c1"># :(</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Mr. FumbleFingers&#39;, &#39;class&#39;: &#39;Artificer&#39;, &#39;race&#39;: &#39;goblin&#39;, &#39;level&#39;: 14, &#39;items&#39;: [&#39;wrench&#39;, &#39;crossbow&#39;, {&#39;bolts&#39;: 3}]}
+Mr. FumbleFingers
+[&#39;wrench&#39;, &#39;crossbow&#39;, {&#39;bolts&#39;: 3}]
+{&#39;bolts&#39;: 3}
+3
+{&#39;name&#39;: &#39;Mr. FumbleFingers&#39;, &#39;class&#39;: &#39;Artificer&#39;, &#39;race&#39;: &#39;goblin&#39;, &#39;level&#39;: 14, &#39;items&#39;: [&#39;wrench&#39;, &#39;crossbow&#39;, {&#39;bolts&#39;: 3}], &#39;mount&#39;: &#39;Pig&#39;}
+{&#39;name&#39;: &#39;Mr. FumbleFingers&#39;, &#39;class&#39;: &#39;Artificer&#39;, &#39;race&#39;: &#39;goblin&#39;, &#39;level&#39;: 14, &#39;items&#39;: [&#39;wrench&#39;, &#39;crossbow&#39;, {&#39;bolts&#39;: 3}], &#39;mount&#39;: &#39;Pig&#39;, &#39;weakness&#39;: &quot;Can&#39;t go anywhere without his pet rock&quot;, &#39;trait&#39;: &#39;Likes to cook, but no one likes his cooking&#39;}
+{&#39;name&#39;: &#39;Mr. FumbleFingers&#39;, &#39;class&#39;: &#39;Artificer&#39;, &#39;race&#39;: &#39;goblin&#39;, &#39;level&#39;: 14, &#39;items&#39;: [&#39;wrench&#39;, &#39;crossbow&#39;, {&#39;bolts&#39;: 3}], &#39;weakness&#39;: &quot;Can&#39;t go anywhere without his pet rock&quot;, &#39;trait&#39;: &#39;Likes to cook, but no one likes his cooking&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="casting-changing-datatypes">
+<h2>Casting/ Changing Datatypes<a class="headerlink" href="#casting-changing-datatypes" title="Link to this heading">#</a></h2>
+<p>Sometimes you want a float when you have an int, and sometimes you have string when you want to add it like a number.  In limited circustances, you can change your datatype by ‘casting’ your data as a different type.  It doesn’t always work, but if you need your data to look like a different datatype, it is worth trying.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;332&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
+
+<span class="c1">#print(str1 + 1) #This will give you a type error</span>
+
+<span class="n">intOfStr1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1">#This will work</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">intOfStr1</span><span class="p">)</span>
+
+<span class="c1">#different things you can cast:</span>
+<span class="c1">#int() to convert to integers</span>
+<span class="c1">#float() to convert to  floats</span>
+<span class="c1">#str() to convert to  strings</span>
+<span class="c1">#bool() to convert to booleans</span>
+<span class="c1">#list() to convert to a list (needs to be iterable, like a tuple)</span>
+<span class="c1">#tuple() to convert to a tuple</span>
+<span class="c1">#set() to convert to a set</span>
+<span class="c1">#dict() to convert to dictionaries (almost never works properly fyi)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>332
+333
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -568,6 +896,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-datatypes">Combining Datatypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-datatypes">Sequence Datatypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casting-changing-datatypes">Casting/ Changing Datatypes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
