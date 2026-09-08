@@ -11,9 +11,11 @@ parts:
       - file: python/operators
       - file: python/datatypes
       - file: python/vars
+      - file: python/input
       - file: python/conditionals
       - file: python/booleans
       - file: python/numpyStuff
+      - file: python/plotting
 
   - caption: Python- Loops
     chapters:
