@@ -492,14 +492,14 @@
 
 <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_name</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 
 <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">))</span> <span class="c1"># Don&#39;t forget the cmap </span>
 <span class="c1">#(This convert is not how you will do it for the project)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span> 
 
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;A &quot;Carnival&quot;&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;An image&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Color&#39;</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Greyscale without cmap&#39;</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;proper greyscale&#39;</span><span class="p">)</span>
@@ -513,7 +513,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/841fdeb477fb1b272f04d7e1d57059ceafd055b51115e48c6e4a40b70fd05f0c.png" src="../_images/841fdeb477fb1b272f04d7e1d57059ceafd055b51115e48c6e4a40b70fd05f0c.png" />
+<img alt="../_images/be2190ad0e7fc6c47c33988dffec7a2f2b6c3b21840674cf36c088e2208d71ae.png" src="../_images/be2190ad0e7fc6c47c33988dffec7a2f2b6c3b21840674cf36c088e2208d71ae.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -587,7 +587,8 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="n">image_name</span> <span class="o">=</span> <span class="s1">&#39;images/notHappyCarnival.jpg&#39;</span>
+<span class="n">image_name</span> <span class="o">=</span> <span class="s1">&#39;images/spiderPete.jpg&#39;</span>
+<span class="c1"># Another image file: happyCarnival.jpg, notHappyCarnival.jpg&#39;</span>
 <span class="n">img_col</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_name</span><span class="p">)</span>
 <span class="n">img_gry</span> <span class="o">=</span> <span class="n">img_col</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
 
@@ -615,7 +616,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cc15a19bdfd0541c54d39b92c495af70c91000e4c133e29e482224ef692c715b.png" src="../_images/cc15a19bdfd0541c54d39b92c495af70c91000e4c133e29e482224ef692c715b.png" />
+<img alt="../_images/a2d3fa75ba6178aa819542579cb2b451c2c91d1c88767112a595428bb027e882.png" src="../_images/a2d3fa75ba6178aa819542579cb2b451c2c91d1c88767112a595428bb027e882.png" />
 </div>
 </div>
 <div class="cell docutils container">
