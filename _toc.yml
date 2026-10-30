@@ -43,3 +43,7 @@ parts:
         title: 2025 In-class Examples
       - url: https://github.com/btmannin5132/133Teach/tree/main/2026
         title: 2026 In-class Examples
+
+  - caption: Ben's Testing Area
+    chapters:
+      - file: testing/preClassTest
