@@ -559,15 +559,13 @@ needed.  Be careful with order of operations.</p>
 <li><p><span class="math notranslate nohighlight">\(b!\cdot (\cos(\dfrac{\pi}{c})- a)\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\dfrac{c^{\pi e} \sin^{-1}{(\sqrt{3}/2)}}{a^e b}\)</span></p></li>
 </ol>
-</li>
-</ol>
-<p><strong>hint</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In `Python`, you can compute the inverse of a trigonometric function using
-the {code}`math` module. For example, the inverse sine function, denoted as
-`\sin^{-1}` can be calculated using {code}`math.asin()`.
-</pre></div>
+<div class="hint admonition">
+<p class="admonition-title">Hint</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">Python</span></code>, you can compute the inverse of a trigonometric function using
+the <code class="code docutils literal notranslate"><span class="pre">math</span></code> module. For example, the inverse sine function, denoted as
+<code class="docutils literal notranslate"><span class="pre">\sin^{-1}</span></code> can be calculated using <code class="code docutils literal notranslate"><span class="pre">math.asin()</span></code>.</p>
 </div>
-<ol class="arabic simple" start="6">
+</li>
 <li><p>After each calculation, print the output to the command window rounded to  decimal places.  Research
 <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#formatted-string-literals">f-strings</a>
 and the <a class="reference external" href="https://docs.python.org/3/library/string.html#format-specification-mini-language">format specification
@@ -575,13 +573,10 @@ mini-language</a>
 to learn how to round the output to  decimal places without
 changing the stored value.</p></li>
 </ol>
-<div class="cell tag_remove-input docutils container">
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Let&#39;s do the math part first.  Inialize the math library here. Uncomment the proper line below to import the math librbary</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s do the math part first.  Inialize the math library here. Uncomment the proper line below to import the math librbary</span>
+
 <span class="c1">#import pandas</span>
 <span class="c1">#import math</span>
 <span class="c1">#from math import factorial</span>
@@ -589,48 +584,52 @@ changing the stored value.</p></li>
 <span class="c1">#import matplotlib.pyplot as plt</span>
 <span class="c1">#import numpy as np</span>
 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Now initialze your variables, a, b and c.  variable a is provided as an example.</span>
-<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="c1"># Now initialze your variables, a, b and c.  variable a is provided as an example.</span>
+
 <span class="n">a</span> <span class="o">=</span> <span class="mi">101</span>
 
-<span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
-
-<span class="n">c</span> <span class="o">=</span> <span class="mf">12.34</span>
 
 
+
+<span class="c1"># Now Define the equations.  Use variable names &quot;eq1&quot;,&quot;eq2&quot;, and &quot;eq3&quot; so that you can check the values at the end</span>
+
+
+
+
+
+<span class="c1"># Make sure you run the code! Otherwise we can&#39;t check it.  Note that there are no print statements in this yet, so you won&#39;t see any outputs for the code yet.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">This line will check your results for this first part.  Click &#39;run&#39; below to check</span>
 <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Now Define the equations.  Use variable names &quot;eq1&quot;,&quot;eq2&quot;, and &quot;eq3&quot; so that you can check the values at the end</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="n">eq1</span> <span class="o">=</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-
-<span class="n">eq2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
-
-<span class="n">eq3</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">asin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">math</span><span class="o">.</span><span class="n">e</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
-
-
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">This line will check your results for this first part.  Feel free to comment out if you prefer.</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pre0Check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_math_results</span>
 <span class="n">check_math_results</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span> <span class="n">eq2</span><span class="p">,</span> <span class="n">eq3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Equation 1: Correct!
-Equation 2: Correct!
-Equation 3: Correct!
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> This line will check your results for this first part.  Click &#39;run&#39; below to check</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> &#39;&#39;&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span><span class="w"> </span><span class="nn">pre0Check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_math_results</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">check_math_results</span><span class="p">(</span><span class="n">eq1</span><span class="p">,</span> <span class="n">eq2</span><span class="p">,</span> <span class="n">eq3</span><span class="p">)</span>
 
-All checks passed! You&#39;re ready to f-string formatting.
+<span class="ne">NameError</span>: name &#39;eq1&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <p>Great!  Now let’s setup the actual file.  Below is a general setup for your standard ENGR133 python files.  Copy over your imports right before the <code class="docutils literal notranslate"><span class="pre">main()</span></code> function, and then add your variable initializations, and equation deffinitions in the <code class="docutils literal notranslate"><span class="pre">main()</span></code> function.</p>
 <p>Something that you will almost always be expected to do is print out values to the terminal so that they can be recorded.  Using “formatted strings” or <code class="docutils literal notranslate"><span class="pre">f-strings</span></code> as mentioned in step 6 above will make quick work of printing text and numbers effectively.</p>
-<div class="cell tag_remove-input docutils container">
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -667,25 +666,9 @@ All checks passed! You&#39;re ready to f-string formatting.
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># Import the Math module here</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
 
 <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-    <span class="c1">#Write your main code here:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">101</span>
-
-    <span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
-
-    <span class="n">c</span> <span class="o">=</span> <span class="mf">12.34</span>
-
-    <span class="n">eq1</span> <span class="o">=</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-
-    <span class="n">eq2</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
-
-    <span class="n">eq3</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">asin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">math</span><span class="o">.</span><span class="n">e</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;equation 1: </span><span class="si">{</span><span class="n">eq1</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;equation 2: </span><span class="si">{</span><span class="n">eq2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;equation 3: </span><span class="si">{</span><span class="n">eq3</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     
 
@@ -693,29 +676,41 @@ All checks passed! You&#39;re ready to f-string formatting.
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">This line will check your string formatting.  DO NOT include in your code to Gradescope!</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="n">check_formatting</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
+
     
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>equation 1: 151.844
-equation 2: -504162.451
-equation 3: 1112.146
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">42</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block after function definition on line 37
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">This line will check your string formatting.  DO NOT include in your code to Gradescope!</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pre0Check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_formatting</span>
+<span class="n">check_formatting</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> This line will check your string formatting.  DO NOT include in your code to Gradescope!</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> &#39;&#39;&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span><span class="w"> </span><span class="nn">pre0Check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_formatting</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">check_formatting</span><span class="p">(</span><span class="n">main</span><span class="p">)</span>
 
-Checking String formatting with expected results:
-
-Equation 1 Output: &#39;equation 1: 151.844&#39; (Correct!)
-
-Equation 2 Output: &#39;equation 2: -504162.451&#39; (Correct!)
-
-Equation 3 Output: &#39;equation 3: 1112.146&#39; (Correct!)
-
-
-Print formatting matches the sample output perfectly! Ready for Gradescope.
+<span class="ne">NameError</span>: name &#39;main&#39; is not defined
 </pre></div>
 </div>
 </div>
