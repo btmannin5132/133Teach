@@ -32,6 +32,8 @@ def check_math_results(user_eq1, user_eq2, user_eq3):
 
     if passed:
         print("\nAll checks passed! You're ready to f-string formatting.")
+    else:
+        print("\nMake sure to re-run your script so the new values are calcuated before running the check again!")
     return
 
 
@@ -67,7 +69,9 @@ def check_formatting(main_func):
     passed = True
     if len(student_lines) < 3:
         print(f"Expected 3 print output lines, but got {len(student_lines)}. Make sure you print all three equations inside main().")
-        return False
+        print("\nMake sure to re-run your script so the new values are calcuated before running the check again!")
+
+        return
 
     for i, (student_line, expected_line) in enumerate(zip(student_lines, expected_lines), start=1):
         if student_line == expected_line:
@@ -78,4 +82,6 @@ def check_formatting(main_func):
 
     if passed:
         print("\nPrint formatting matches the sample output perfectly! Ready for Gradescope.")
+    else:
+        print("\nMake sure to re-run your script so the new values are calcuated before running the check again!")
     return
