@@ -42,7 +42,6 @@ import io
 
 def check_formatting(main_func):
     print("\nChecking String formatting with expected results:\n")
-    """Step 2: Executes main() and validates exact print labels and f-string rounding."""
     new_out = io.StringIO()
     old_out = sys.stdout
     sys.stdout = new_out
@@ -77,7 +76,7 @@ def check_formatting(main_func):
         if student_line == expected_line:
             print(f"Equation {i} Output: '{student_line}' (Correct!)\n")
         else:
-            print(f"Equation {i} Output:\n   Got:      '{student_line}'\n   Expected: '{expected_line}'\n")
+            print(f"Equation {i} Output:\n   Got:   '{student_line}'\n   Expected:  '{expected_line}'\n")
             passed = False
 
     if passed:
