@@ -7,13 +7,17 @@ logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
-execute:
-  execute_notebooks: force
+# execute:
+#   execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
+
+thebe:
+  kernel_name: "python3"
+  binder_options:
 
 # Information about where the book exists on the web
 repository:
@@ -33,13 +37,19 @@ html:
   use_folder_names: false
 
 launch_buttons:
-  thebe: true
-  binder: true 
+  thebe_lite: true
 
-binder:
-  url: https://github.com/btmannin5132/133Teach
-  branch: main 
-  binderhub_url: "https://mybinder.org"
+# binder:
+#   url: https://github.com/btmannin5132/133Teach
+#   branch: main 
+#   binderhub_url: "https://mybinder.org"
+
+
+thebe:
+  dependencies:
+    - numpy
+    - pandas
+    - matplotlib
 
 execute:
   execute_notebooks: force
