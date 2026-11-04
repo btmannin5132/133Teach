@@ -18,6 +18,10 @@ latex:
 thebe:
   kernel_name: "python3"
   binder_options:
+  dependencies:
+    - numpy
+    - pandas
+    - matplotlib
 
 # Information about where the book exists on the web
 repository:
@@ -43,13 +47,10 @@ launch_buttons:
 #   url: https://github.com/btmannin5132/133Teach
 #   branch: main 
 #   binderhub_url: "https://mybinder.org"
-
-
-thebe:
-  dependencies:
-    - numpy
-    - pandas
-    - matplotlib
+sphinx:
+  config:
+    html_theme_options:
+      use_thebe_button: true
 
 execute:
   execute_notebooks: force
