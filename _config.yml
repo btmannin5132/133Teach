@@ -24,12 +24,14 @@ html:
   use_repository_button: true
   use_folder_names: false
 
-# Standard launch configuration for interactive code
+# Standard launch configuration
 launch_buttons:
   notebook_interface: jupyterlab
 
-# Sphinx extensions and theme options
+# Explicitly load the sphinx_thebe extension
 sphinx:
+  extra_extensions:
+    - sphinx_thebe
   config:
     html_theme_options:
       use_thebe_button: true
