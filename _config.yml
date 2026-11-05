@@ -8,21 +8,13 @@ latex:
   latex_documents:
     targetname: book.tex
 
-# Corrected indentation for Thebe and Pyodide dependencies
-thebe:
-  kernel_name: "python3"
-  dependencies:
-    - numpy
-    - pandas
-    - matplotlib
-
 # Information about where the book exists on the web
 repository:
   url: https://github.com/btmannin5132/133Teach
   path_to_book: ""
   branch: main
 
-# HTML theme and button configuration
+# Add GitHub buttons to your book
 html:
   theme:
     name: sphinx_book_theme
@@ -32,14 +24,23 @@ html:
   use_repository_button: true
   use_folder_names: false
 
-# Corrected launch buttons block
+# Standard launch configuration for interactive code
 launch_buttons:
-  thebe: true
+  notebook_interface: jupyterlab
 
+# Sphinx extensions and theme options
 sphinx:
   config:
     html_theme_options:
       use_thebe_button: true
+
+# Thebe configuration for browser-side execution
+thebe:
+  kernel_name: "python3"
+  dependencies:
+    - numpy
+    - pandas
+    - matplotlib
 
 execute:
   execute_notebooks: force
