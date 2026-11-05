@@ -1,12 +1,21 @@
 # Preclass test 2
 
-```{notebooklite} preClassTest.ipynb
-```
-```{replite}
-import numpy as np
-import matplotlib.pyplot as plt
+```{eval-rst}
+.. notebooklite:: preClassTest.ipynb
+   :width: 100%
+   :height: 10000px
 
-x = np.linspace(0, 10, 100)
-plt.plot(x, np.sin(x))
-plt.show()
+```
+```{eval-rst}
+.. replite::
+   :width: 100%
+   :height: 400px
+
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+   x = np.linspace(0, 10, 100)
+   plt.plot(x, np.sin(x))
+   plt.show()
+
 ```
