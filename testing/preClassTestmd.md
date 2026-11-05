@@ -3,11 +3,11 @@
 ```{eval-rst}
 .. notebooklite:: preClassTest.ipynb
    :width: 100%
-   :height: 10000px
+   :height: 1000px
 
 ```
 ```{eval-rst}
-.. replite::
+.. notebooklite::
    :width: 100%
    :height: 400px
 
