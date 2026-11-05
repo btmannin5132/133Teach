@@ -1,0 +1,46 @@
+# Book settings
+title: Manning-ENGR133
+author: Ben Manning
+logo: logo.png
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/btmannin5132/133Teach
+  path_to_book: ""
+  branch: main
+
+# Add GitHub buttons to your book
+html:
+  theme:
+    name: sphinx_book_theme
+    options:
+      default_mode: dark
+  css:
+    - interact.css
+  use_issues_button: true
+  use_repository_button: true
+  use_folder_names: false
+
+# Launch buttons configuration
+launch_buttons:
+  jupyterlite: true
+
+# Sphinx configuration and extension bindings
+sphinx:
+  extra_extensions:
+    - jupyterlite_sphinx
+  config:
+    html_theme_options:
+      repository_url: "https://github.com/btmannin5132/133Teach"
+      repository_branch: "main"
+      use_repository_button: true
+      use_issues_button: true
+      use_jupyterlite_button: true
+
+execute:
+  execute_notebooks: auto

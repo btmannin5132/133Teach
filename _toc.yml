@@ -46,4 +46,4 @@ parts:
 
   - caption: Ben's Testing Area
     chapters:
-      - file: testing/preClassTestmd
+      - file: testing/preClassTest
