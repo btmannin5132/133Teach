@@ -1,23 +1,16 @@
 # Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
-
 title: Manning-ENGR133
 author: Ben Manning
 logo: logo.png
-
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
-# execute:
-#   execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
 
+# Corrected indentation for Thebe and Pyodide dependencies
 thebe:
   kernel_name: "python3"
-  binder_options:
   dependencies:
     - numpy
     - pandas
@@ -25,12 +18,11 @@ thebe:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/btmannin5132/133Teach  # Online location of your book
-  path_to_book: ""  # Optional path to your book, relative to the repository root
+  url: https://github.com/btmannin5132/133Teach
+  path_to_book: ""
   branch: main
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+# HTML theme and button configuration
 html:
   theme:
     name: sphinx_book_theme
@@ -40,13 +32,10 @@ html:
   use_repository_button: true
   use_folder_names: false
 
+# Corrected launch buttons block
 launch_buttons:
-  thebe_lite: true
+  thebe: true
 
-# binder:
-#   url: https://github.com/btmannin5132/133Teach
-#   branch: main 
-#   binderhub_url: "https://mybinder.org"
 sphinx:
   config:
     html_theme_options:
