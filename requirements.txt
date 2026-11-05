@@ -1,5 +1,5 @@
 jupyter-book
-sphinx-thebe
+jupyterlite-sphinx
 numpy
 pandas
 matplotlib

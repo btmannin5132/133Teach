@@ -1,14 +1,7 @@
 # Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
-
 title: Manning-ENGR133
 author: Ben Manning
 logo: logo.png
-
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
-execute:
-  execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -17,12 +10,11 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/btmannin5132/133Teach  # Online location of your book
-  path_to_book: ""  # Optional path to your book, relative to the repository root
+  url: https://github.com/btmannin5132/133Teach
+  path_to_book: ""
   branch: main
 
 # Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   theme:
     name: sphinx_book_theme
@@ -32,14 +24,17 @@ html:
   use_repository_button: true
   use_folder_names: false
 
+# Enable JupyterLite client-side launch buttons (Replaces Binder)
 launch_buttons:
-  thebe: true
-  binder: true 
+  jupyterlite: true
 
-binder:
-  url: https://github.com/btmannin5132/133Teach
-  branch: main 
-  binderhub_url: "https://mybinder.org"
+# Sphinx configuration and JupyterLite extension integration
+sphinx:
+  extra_extensions:
+    - jupyterlite_sphinx
+  config:
+    html_theme_options:
+      use_jupyterlite_button: true
 
 execute:
-  execute_notebooks: force
+  execute_notebooks: auto
