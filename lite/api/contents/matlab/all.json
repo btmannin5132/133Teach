@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-11-05T02:56:22.696999Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-05T02:56:15.474999Z",
+      "mimetype": null,
+      "name": "plotting.ipynb",
+      "path": "matlab/plotting.ipynb",
+      "size": 38420,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2026-11-05T02:56:22.696999Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-11-05T02:56:22.696999Z",
+  "mimetype": null,
+  "name": "matlab",
+  "path": "matlab",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

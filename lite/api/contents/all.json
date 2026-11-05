@@ -2,11 +2,25 @@
   "content": [
     {
       "content": null,
-      "created": "2026-11-05T02:45:46.895988Z",
+      "created": "2026-11-05T02:56:22.696999Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2026-11-05T02:45:46.895988Z",
+      "last_modified": "2026-11-05T02:56:22.696999Z",
+      "mimetype": null,
+      "name": "matlab",
+      "path": "matlab",
+      "size": null,
+      "type": "directory",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-11-05T02:56:22.696999Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-11-05T02:56:22.696999Z",
       "mimetype": null,
       "name": "testing",
       "path": "testing",
@@ -15,11 +29,11 @@
       "writable": true
     }
   ],
-  "created": "2026-11-05T02:45:46.895988Z",
+  "created": "2026-11-05T02:56:22.696999Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2026-11-05T02:45:46.895988Z",
+  "last_modified": "2026-11-05T02:56:22.696999Z",
   "mimetype": null,
   "name": "",
   "path": "",

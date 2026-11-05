@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2026-11-05T02:45:46.896988Z",
+      "created": "2026-11-05T02:56:22.697999Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2026-11-05T02:45:37.857987Z",
+      "last_modified": "2026-11-05T02:56:16.583999Z",
       "mimetype": null,
       "name": "preClassTest.ipynb",
       "path": "testing/preClassTest.ipynb",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2026-11-05T02:45:46.895988Z",
+  "created": "2026-11-05T02:56:22.696999Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2026-11-05T02:45:46.895988Z",
+  "last_modified": "2026-11-05T02:56:22.696999Z",
   "mimetype": null,
   "name": "testing",
   "path": "testing",
