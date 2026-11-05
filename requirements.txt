@@ -4,4 +4,5 @@ numpy
 pandas
 matplotlib
 ipykernel
+jupyterlite-xeus
 octave_kernel

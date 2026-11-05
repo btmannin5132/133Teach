@@ -1,0 +1,6 @@
+name: xeus-octave-wasm
+channels:
+  - https://prefix.dev/emscripten-forge-4x
+  - https://conda-forge
+dependencies:
+  - xeus-octave

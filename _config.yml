@@ -41,6 +41,8 @@ sphinx:
       use_repository_button: true
       use_issues_button: true
       use_jupyterlite_button: true
+      jupyterlite_build_command_options:
+        XeusAddon.environment_file: "environment.yml"
 
 execute:
   execute_notebooks: auto

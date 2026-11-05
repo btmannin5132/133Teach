@@ -1,0 +1,8 @@
+{
+  "LiteBuildApp": {
+    "ignore_unpublished": true,
+    "disable_addons": [
+      "jupyterlite-xeus"
+    ]
+  }
+}
