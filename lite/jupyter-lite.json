@@ -12,6 +12,12 @@
         "extension": "./extension",
         "load": "static/remoteEntry.abcac41d5ca77040.js",
         "name": "@jupyterlite/pyodide-kernel-extension"
+      },
+      {
+        "extension": "./extension",
+        "load": "static/remoteEntry.245c3da0062ecbaa.js",
+        "name": "@jupyterlite/xeus-extension",
+        "style": "./style"
       }
     ],
     "fileTypes": {
