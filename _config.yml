@@ -8,7 +8,7 @@ latex:
   latex_documents:
     targetname: book.tex
 
-# Information about where the book exists on the web
+# Information about where the book exists on the web (Must be top-level)
 repository:
   url: https://github.com/btmannin5132/133Teach
   path_to_book: ""
@@ -24,11 +24,11 @@ html:
   use_repository_button: true
   use_folder_names: false
 
-# Standard launch configuration
+# Launch buttons configuration
 launch_buttons:
-  notebook_interface: jupyterlab
+  thebe: true
 
-# Explicitly load the sphinx_thebe extension
+# Sphinx configuration and extensions
 sphinx:
   extra_extensions:
     - sphinx_thebe
@@ -36,7 +36,7 @@ sphinx:
     html_theme_options:
       use_thebe_button: true
 
-# Thebe configuration for browser-side execution
+# Thebe browser-side execution config
 thebe:
   kernel_name: "python3"
   dependencies:
