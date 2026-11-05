@@ -20,6 +20,8 @@ html:
     name: sphinx_book_theme
     options:
       default_mode: dark
+  css:
+    - interact.css
   use_issues_button: true
   use_repository_button: true
   use_folder_names: false
