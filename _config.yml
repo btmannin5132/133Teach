@@ -24,16 +24,20 @@ html:
   use_repository_button: true
   use_folder_names: false
 
-# Enable JupyterLite client-side launch buttons (Replaces Binder)
+# Launch buttons configuration
 launch_buttons:
   jupyterlite: true
 
-# Sphinx configuration and JupyterLite extension integration
+# Sphinx configuration and extension bindings
 sphinx:
   extra_extensions:
     - jupyterlite_sphinx
   config:
     html_theme_options:
+      repository_url: "https://github.com/btmannin5132/133Teach"
+      repository_branch: "main"
+      use_repository_button: true
+      use_issues_button: true
       use_jupyterlite_button: true
 
 execute:
